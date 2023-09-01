@@ -1,0 +1,173 @@
+h1, h2 {
+	text-align: center;
+}
+
+h1, h2, h3, h4, p, a, li {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background: black;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+
+img {
+	-webkit-user-drag: none;
+}
+
+img.medium {
+	max-width: 30em;
+	max-height: 20em;
+}
+
+#research-list {
+	text-align: center;
+}
+
+.research-item {
+	width: 24%;
+	margin: auto;
+	padding: 0;
+	display: inline-block;
+	cursor: pointer;
+	background-color: #333;
+}
+
+.research-item img {
+	width: 95%;
+}
+
+#header {
+	position: fixed;
+	top: -0.5em;
+	right: 1em;
+}
+
+#footer {
+	position: fixed;
+	background-color: #333;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	height: 2em;
+	margin: 0;
+	padding: 0;
+}
+
+#navbar {
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.navitem {
+	float: left;
+}
+
+.navitem a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navitem a:hover {
+	background-color: #111;
+}
+
+.navitem.active {
+	background-color: #04AA6D;
+}
+
+.research-item:hover {
+	background-color: #111;
+}
+
+.research-item.active {
+	background-color: #04AA6D;
+}
+
+.spacer {
+	height: 2.5em;
+}
+
+#button-holder {
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	height: 4em;
+	width: 10em;
+	background-color: #333;
+	border: 1px solid white;
+	font-size: 18px;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+.button.small {
+	height: 2em;
+	width: 5em;
+}
+
+.button p {
+	text-align: center;
+}
+
+.button:hover {
+	background-color: #111;
+}
+
+.hidden {
+	display: none;
+}
+
+.col {
+	display: inline-block;
+	text-align: center;
+	justify-content: center;
+	vertical-align: text-top;
+}
+
+p, li {
+	text-align: justify;
+	text-justify: auto;
+}
+
+.research-description {
+	width: 95%;
+	margin: auto;
+}
+
+.dot {
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	background-color: #F4E0B9;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+.dot:hover {
+	background-color: #C1B086;
+	height: 17px;
+	width: 17px;
+}
+
+.dot.active {
+	background-color: #FE0000;
+}
+
+.caption {
+	font-size: 0.5em;
+}

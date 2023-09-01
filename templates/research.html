@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div id="research-list">
+
+        <div class="research-item active" id="tde">
+            <h4>Tidal Disruption Events</h4>
+            <img src="../static/images/TDE-icon.png" alt="Tidal disruption event icon">
+        </div>
+
+        <div class="research-item" id="disk">
+            <h4>Thin Tilted Accretion Disks</h4>
+            <img src="../static/images/tilted-disk-icon.png" alt="Tilted disk icon">
+        </div>
+
+        <div class="research-item" id="tweezer">
+            <h4>Optical Tweezer Arrays</h4>
+            <img src="../static/images/tweezer-icon.png" alt="Optical tweezer icon">
+        </div>
+
+        <div class="research-item" id="cubesat">
+            <h4>Cosmic Ray Detecting CubeSat</h4>
+            <img src="../static/images/crd-icon.png" alt="Cosmic ray detector icon">
+        </div>
+
+    </div>
+
+    <div class="col" style="width: 50%; margin: 0 25%;">
+
+        <div id="tde-description" class="research-description">
+
+            <h3>What is a Tidal Disruption Event?</h3>
+
+            <p>
+                When a star passes too close to a supermassive black hole (BH), the BH’s tidal forces overcome the star's self-gravity to pull apart the star into stream of debris in a so-called tidal disruption event (TDE).
+                Some of the stellar debris is gravitationally bound to the BH and accretes at rates far above the theoretical Eddington limit, resulting in a bright flare and the formation of a “debris disk” on a timescale of weeks to months.
+                Although TDEs are relatively rare, with a rate of one per 1,000 to 10,000 years per galaxy, they have a broad astrophysical implications.
+            </p>
+
+            <ol>
+                <li>
+                    Only ~30% of galaxies host active galactic nuclei (AGN).
+                    TDEs provide a rare glimpse of the central BHs of the quiescent majority of galaxies, allowing astronomers to better understand the fueling modes for supermassive BHs and their growth mechanisms and evolution.
+                </li>
+                <li>
+                    TDEs also offer a clean laboratory for studying super-Eddington accretion because the accretion rate as a function of time is set by a handful of orbital and stellar structure parameters.
+                </li>
+                <li>
+                    Finally, because the properties of TDE flares depend on the properties of the disrupted star, TDEs probe the stellar populations and kinematics of the galactic centers where the majority of events are produced.
+                </li>
+            </ol>
+
+            <h3>Energy Dissipation in TDEs</h3>
+
+            <p>
+                Working with Prof. Sasha Tchekhovskoy, I use the general relativistic magnetohydrodynamics (GRMHD) code H-AMR, developed by <a href="https://www.matthewliska.com/">Matthew Liska</a>, to simulate TDEs.
+                In my first published work, I focused on understanding the physical processes that drive the circularization of stellar debris in deeply-penetrating TDEs.
+                I found that circularization of the most bound debris is dominated by self-intersections of the stellar debris caused by general relativistic precession and that circularization at later times is dominated by hydrodynamic instabilities at the debris-disk interface.
+            </p>
+
+            <h3>Current and Future Work</h3>
+
+            <p>
+                I am currently working on new TDE simulations which incorporate magnetic fields to investigate the role of the magnetorotational instability (MRI) in driving circularization.
+                These simulations will also test the fossil disk hypothesis, which states that TDEs pick up the requisite magnetic flux to power a jet from a pre-existing accretion disk.
+                The new simulations will cover much longer timescales, allowing me to probe the physics of the debris disk near the time of peak fallback.
+                I am also working on applying analytical models to my simulation data to understand how information about the debris disk geometry and viewing angle is encoded in TDE spectra.
+            </p>
+
+        </div>
+
+        <div id="tweezer-description" class="research-description hidden">
+
+            <h3>What are Optical Tweezer Arrays?</h3>
+
+            <p>
+                Optical tweezers are micrometer-sized optical traps obtained by tightly focusing a laser beam.
+                Optical techniques can diffract the beam into many spots, making it possible to form arrays of atoms in a variety of geometries.
+                In such an array, the interactions between atoms can be controlled by inducing quantum tunneling between array sites or by placing atoms into high-energy Rydberg states.
+                This property makes them great analog quantum simulators (AQS).
+            </p>
+
+            <p>
+                The quantum many-body problem encompasses a vast range of physical problems from Bose-Einstein condensation to the quark-gluon plasma of the early universe.
+                However, most quantum many-body systems are difficult to study directly and too complex to model on classical computers.
+                An AQS uses a controllable quantum system to mimic a less experimentally feasible one via a direct mapping from the Hamiltonian of the simulator to the Hamiltonian of the system.
+                By engineering the interactions of the simulator to closely match those of the system of interest, we can study the system indirectly.
+            </p>
+
+            <h3>Magneto-Optical Trap Control Box</h3>
+
+            <p>
+                As part of Prof. Nir Navon's <a href="https://uqm.yale.edu/">Ultracold Quantum Matter Lab</a>, I worked on an apparatus capable of cooling bosonic Sr down to nano-Kelvin temperatures so that it could be captured by optical tweezers.
+                My key contribution was the design and construction of a control box for the electromagnetic coils of a magneto-optical trap (MOT).
+                The MOT consists of a set of counter-propagating lasers oriented along orthogonal axes and tuned to a frequency just below the transition frequency of the atom.
+                Due to the Doppler effect, only atoms moving towards one of the laser beams will see photons at the correct frequency to absorb them.
+                Many cycles of photon absorption and reemission tend to slow down atoms in the direction of the original photon velocity.
+                This results in an effective damping force proportional and opposite to the atom’s velocity.
+            </p>
+
+            <p>
+                The MOT also includes a quadrupole magnetic field generated by coils in an anti-Helmholtz configuration.
+                This causes a Zeeman shift in the transition frequency which increases with the atom’s displacement from the center of the MOT.
+                As an atom’s displacement increases, it has a lower threshold for transition, so it is more likely to absorb a photon.
+                This results in an effective restoring force proportional and opposite to the atom's displacement.
+                The combination of the restoring and damping forces results in a damped oscillator potential for a cloud of atoms which eventually brings all atoms to the center of the MOT at an ultracold temperature.
+            </p>
+
+            <p>
+                The MOT coils must also be able to switch to a Helmholtz configuration to generate a near constant magnetic field of magnitude greater than 700 G to allow the usually forbidden  S  -  P  clock transition in Strontium.
+                The transition between Helmholtz and anti-Helmholtz configurations must occur in less than a millisecond to avoid unnecessary atom loss.
+                My control box switches between these configurations rapidly using insulated gate bipolar transistors (IGBTs) to operate a fast-switching H-bridge drawing up to 300 Amps.
+                The control box also includes a water cooling system, a temperature interlock, and a custom PCB for running the control box from a digital display.
+            </p>
+
+            <img src="../static/images/MOT.jpg" style="width: 50%;">
+
+            <p>
+                During my time in Nir's lab, I also worked on several other projects, including the development of a new user interface for the parametric experimental control software Artiq, the application of convolution neural networks to the fast sorting of atom arrays via the assignment problem, the deployment of a network of sensors to monitor ambient lab conditions and log the data to an online database, and the alignment and testing of a double-pass acousto-optic modulator (AOM).
+            </p>
+
+        </div>
+
+        <div id="cubesat-description" class="research-description hidden">
+
+            <p>
+                As co-president of Yale's largest undergraduate engineering organization, the <a href="https://yaleaerospace.org/">Yale Undergraduate Aerospace Association</a> (YUAA), I managed several aerospace projects.
+                I also lead the organization in efforts to engage with the Yale and broader New Haven community.
+            </p>
+
+            <p>
+                I worked on a team designing a payload rover for a rocket which would compete in the Intercollegiate Rocket Engineering Competition. My main contribution was the development of an Arduino-based system which allowed the rover to receive commands and stream video footage over the internet. The rover used an Arduino shield with bluetooth functionality to connect to a cheap smartphone which queried JSON files using HTTP requests and streamed video over Skype.
+            </p>
+
+            <p>
+                I lead a small team designing and constructing a robotic bird, ornithopter, capable of self-correction flight. The ornithopter used high-torque servos to flag wings made of carbon fiber rods and kit fabric. Our design used different offsets in the flapping cycle to control roll, pitch, and yaw. The ornithopter included a custom PCB which monitored acceleration and magnetic fields to calibrate steering and apply real-time corrections to its flight. This project was funded by the Connecticut Space Grant Consortium and culminated in a poster presentation at the Connecticut Space Grant expo.
+            </p>
+
+            <p>
+
+                Aerospace
+                As co-president of the Yale Undergraduate Aerospace Association (YUAA), I design and manage aerospace projects and engage with the Yale and broader New Haven community.
+
+                Rover
+                I worked on a team designing a payload rover for a rocket which would compete in the Intercollegiate Rocket Engineering Competition. My main contribution was the development of an Arduino-based system which allowed the rover to receive commands and stream video footage over the internet. The rover used an Arduino shield with bluetooth functionality to connect to a cheap smartphone which queried JSON files using HTTP requests and streamed video over Skype.
+
+                Ornithopter
+                I lead a small team designing and constructing a robotic bird, ornithopter, capable of self-correction flight. The ornithopter used high-torque servos to flag wings made of carbon fiber rods and kit fabric. Our design used different offsets in the flapping cycle to control roll, pitch, and yaw. The ornithopter included a custom PCB which monitored acceleration and magnetic fields to calibrate steering and apply real-time corrections to its flight. This project was funded by the Connecticut Space Grant Consortium and culminated in a poster presentation at the Connecticut Space Grant expo. An image of the ornithopter body is shown below.
+
+                CubeSat
+                I am leading a small team designing and constructing the payload for the Bouchet Low-Earth Alpha/Beta Space Telescope (BLAST), a project supported by NASA's CubeSat launch initiative. The purpose of BLAST is to detect cosmic rays caught in the Earth's magnetic field to map the time-variable morphology and location of the South Atlantic Anomaly (SAA), a region where the Earth's lower Van Allen belt dips down to low altitudes, resulting in an enhanced magnetic flux at low Earth orbit. The cosmic ray detector consists of a plastic scintillator, shielding, a Silicon photomultiplier, and custom analog circuitry acting as a multi-channel analyzer.
+            </p>
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        $("#navbar").children().eq(2).addClass("active");
+        $(".research-item").on("click", function () {
+            $(this).addClass("active");
+            $(".research-item").not(this).removeClass("active");
+            var thisDescription = $("#" + $(this).attr("id") + "-description");
+            thisDescription.removeClass("hidden");
+            $(".research-description").not(thisDescription).addClass("hidden");
+        });
+    </script>
+{% endblock %}
