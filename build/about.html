@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zandalman</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../static/js/main.js"></script>
+</head>
+<body>
+
+    <ul id="navbar">
+        <li class='navitem'><a href="/">Home</a></li>
+        <li class='navitem'><a href="/website/build/about.html">About</a></li>
+        <li class='navitem'><a href="/website/build/research.html">Research</a></li>
+    </ul>
+
+    <div id="header"><p>Zack Andalman: Astrophysicist</p></div>
+
+    <div class="spacer"></div>
+
+    
+
+    <div class="spacer"></div>
+
+    <div class="col" style="width: 1%;"></div>
+
+    <div class="col" style="width: 25%;">
+        <img style='width: 90%;' src='../static/images/me.jpg' alt='Picture of Zack Andalman'>
+    </div>
+
+    <div class="col" style="width: 1%;"></div>
+
+    <div class="col" style="width: 45%; font-size: 1.2em;">
+
+        <p>
+            I am a Department of Energy Computational Sciences Graduate Fellow and current Ph.D. student at the Princeton University Department of Astrophysical Sciences.
+            I use simulations to understand the physics of transients, a class of astrophysical phenomena which change brightness over human timescales (< years) such as supernovae, gamma ray bursts, and compact object mergers.
+            These energetic events often produce multi-messenger signals i.e. electromagnetic radiation, gravitational radiation, cosmic rays.
+        </p>
+
+
+        <p>
+            The current decade promises to be a golden age of transient astronomy, with new instruments like the Vera C. Rubin Observatory.
+            Simulations are an excellent tool for understanding how these events work because they often involved coupled non-linear physics.
+            My primary research focus is tidal disruption events (TDEs), where a star is torn apart by the tidal field of a supermassive black hole (SMBH).
+            I'm interested in what physical processes operate in TDEs and how they can teach us about fundamental accretion physics.
+        </p>
+
+        <p>
+            Outside of research, I am a triathlete and a jazz pianist.
+            Follow me on <a href="https://www.strava.com/athletes/34486092">Strava</a> and reach out if you want to jam.
+        </p>
+
+        <p>
+            Feel free to contact me for collaboration or outreach purposes!
+        </p>
+
+    </div>
+
+    <div class="col" style="width: 1%;"></div>
+
+    <div class="col" style="width: 25%;">
+        <img style='width: 67%;' src='../static/images/piano.jpg' alt='Picture of Zack playing jazz piano'>
+        <img style='width: 67%;' src='../static/images/triathlon.jpg' alt='Picture of Zack finishing a triathlon'>
+    </div>
+
+    <h2>My Academic Journey</h2>
+
+    <div class="col" style="position: relative; width: 60%;">
+        <span class="dot" id="Santa-Cruz" style="top: 48%; left: 11.5%;"></span>
+        <span class="dot active" id="Evanston" style="top: 34%; left: 64%;"></span>
+        <span class="dot" id="New-Haven" style="top: 24%; left: 84.5%;"></span>
+        <span class="dot" id="Princeton" style="top: 32.5%; left: 82%;"></span>
+        <img style='width: 100%;' src="../static/images/‎journey.png" alt="Map of my academic journey">
+    </div>
+
+    <div class="col" style="position: relative; width: 35%;">
+
+        <div class="small button" id="next" style="position: absolute; top: 0; right: 0;"><p style="position: absolute; right: 40%; bottom: -40%;">>>></p></div>
+        <div class="small button" id="previous" style="position: absolute; top: 0; left: 0;"><p style="position: absolute; right: 40%; bottom: -40%;"><<<</p></div>
+
+        <div class="place-info" id="Evanston-info">
+            <h3>Evanston, IL</h3>
+            <h3>2015 - 2019</h3>
+            <p>
+                I grew up in Evanston, IL just North of Chicago where I attended Evanston Township High School (ETHS).
+                During my junior and senior years at ETHS, I worked with Northwestern University Prof. Alexander "Sasha" Tchekhovskoy analyzing simulations of TDEs in the general relativistic magnetohydrodynamics code <a href="https://arxiv.org/abs/1912.10192">H-AMR</a>.
+                I presented this work as posters at the 2018 and 2019 Blue Waters Symposium for Petascale Science and Beyond and as an invited talk at the 19th meeting of the High Energy Astrophysics Division.
+            </p>
+        </div>
+
+        <div class="place-info hidden" id="New-Haven-info">
+            <h3>New Haven, CT</h3>
+            <h3>2019 - 2023</h3>
+            <p>
+                I did undergrad at Yale University, where I studied physics and also took many courses in anthropology and world literature.
+                During my first and second years, I worked in Prof. Nir Navon's <a href="https://uqm.yale.edu/">Ultracold Quantum Matter Lab</a> on an optical tweezer experiment for bosonic Strontium.
+                During my third year, which coincided with the COVID-19 pandemic, I continued my work with Prof. Sasha Tchekhovskoy, resulting in a first-author publication on energy dissipation in TDEs and a co-author publication on accretion in thin misaligned disks.
+                During my fourth year, I continued my work with Prof. Enrico Ramirez-Ruiz from the previous summer under the mentorship of Prof. Priyamvada Natarajan for my senior thesis.
+                I was also the president of the <a href="https://yaleaerospace.org/">Yale Undergraduate Aerospace Association</a>, the largest undergraduate engineering organization on campus, where I lead the development of a cosmic ray detector for a CubeSat satellite and managed many other projects.
+            </p>
+        </div>
+
+        <div class="place-info hidden" id="Santa-Cruz-info">
+            <h3>Santa Cruz, CA</h3>
+            <h3>2022</h3>
+            <p>
+                During the summer after my third year of undergrad at Yale, I worked with Prof. Enrico Ramirez-Ruiz at the <a href="https://lamat.science.ucsc.edu/">Lamat Institute</a> Research Experience for Undergraduates at the University of California Santa Cruz developing an analytic model for optical line emission from TDEs.
+                I continued this work during my fourth year at Yale under the mentorship of Prof. Priyamvada Natarajan.
+                I presented this work as posters at the 241st meeting of the American Astronomical Society and the 20th meeting of the High Energy Astrophysics Division.
+            </p>
+        </div>
+
+        <div class="place-info hidden" id="Princeton-info">
+            <h3>Princeton, NJ</h3>
+            <h3>2023 - 2028</h3>
+            <p>
+                I am currently a Ph.D. student at Princeton University in the Department of Astrophysical Sciences.
+            </p>
+        </div>
+
+    </div>
+
+
+    
+    <script>
+        $("#navbar").children().eq(1).addClass("active");
+    </script>
+
+
+    <div class="spacer"></div>
+
+    <div id="footer">
+        <a href="mailto: zack.andalman@princeton.edu">zack.andalman@princeton.edu</a>
+    </div>
+
+</body>
+</html>
