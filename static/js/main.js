@@ -5,6 +5,7 @@ $(document).ready(function () {
         "Evanston",
         "New-Haven",
         "Santa-Cruz",
+        "Los-Alamos",
         "Princeton"
     ];
 
@@ -19,13 +20,13 @@ $(document).ready(function () {
     });
 
     $("#next").on("click", function () {
-        placeIdx = (placeIdx + 1) % 4;
+        placeIdx = (placeIdx + 1) % places.length;
         placeId = places[placeIdx];
         $("#" + placeId).click();
     });
 
     $("#previous").on("click", function () {
-        placeIdx = (placeIdx + 3) % 4;
+        placeIdx = (placeIdx + places.length - 1) % places.length;
         placeId = places[placeIdx];
         $("#" + placeId).click();
     });
