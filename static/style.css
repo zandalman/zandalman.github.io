@@ -10,7 +10,7 @@ h1, h2, h3, h4, p, a, li {
 body {
 	background: black;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 10em 0;
 	user-select: none;
 }
 
@@ -28,7 +28,8 @@ img.medium {
 }
 
 .research-item {
-	width: 24%;
+	width: 49%;
+	max-width: 300px;
 	margin: auto;
 	padding: 0;
 	display: inline-block;
@@ -52,9 +53,10 @@ img.medium {
 	bottom: 0;
 	width: 100%;
 	text-align: center;
-	height: 2em;
+	height: 3em;
 	margin: 0;
 	padding: 0;
+	font-size: 1.2em;
 }
 
 #navbar {
@@ -70,6 +72,7 @@ img.medium {
 
 .navitem {
 	float: left;
+	font-size: 1.4em;
 }
 
 .navitem a {
@@ -97,7 +100,7 @@ img.medium {
 }
 
 .spacer {
-	height: 2.5em;
+	height: 3em;
 }
 
 #button-holder {

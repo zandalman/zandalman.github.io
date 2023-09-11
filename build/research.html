@@ -49,207 +49,211 @@
 
     </div>
 
-    <div class="col" style="width: 67%; margin: 0 16%; font-size: 1.2em;">
+    <div style="text-align: center;">
 
-        <div id="tde-description" class="research-description">
+        <div class="col" style="width: 90%; max-width: 800px; font-size: 1.2em;">
 
-            <h3>What is a Tidal Disruption Event?</h3>
+            <div id="tde-description" class="research-description">
 
-            <p>
-                When a star passes too close to a supermassive black hole (BH), the BH’s tidal forces pull the star apart into a stream of debris in a so-called tidal disruption event (TDE).
-                Some of the stellar debris is gravitationally bound to the BH and accretes at rates far above the Eddington limit, resulting in a bright flare and the formation of a “debris disk” on a timescale of weeks to months.
-                Although TDEs are relatively rare, with a rate of one per 1,000 to 10,000 years per galaxy, they have a broad astrophysical implications.
-            </p>
+                <h3>What is a Tidal Disruption Event?</h3>
 
-            <ol>
-                <li>
-                    Only ~30% of galaxies host active galactic nuclei (AGN).
-                    TDEs provide a rare glimpse of the central BHs of the quiescent majority of galaxies, allowing astronomers to better understand the fueling modes for supermassive BHs and their growth mechanisms and evolution.
-                </li>
-                <li>
-                    TDEs also offer a clean laboratory for studying accretion physics because the accretion rate is set by only a handful of orbital and stellar structure parameters.
-                    The accretion rate sweeps through multiple accretion regimes, from super- to sub-Eddington, on relatively short timescales.
-                </li>
-                <li>
-                    The properties of TDE flares depend on the properties of the disrupted star.
-                    Therefore, TDEs probe the stellar populations and kinematics of the galactic centers where the majority of events are produced.
-                </li>
-            </ol>
+                <p>
+                    When a star passes too close to a supermassive black hole (BH), the BH’s tidal forces pull the star apart into a stream of debris in a so-called tidal disruption event (TDE).
+                    Some of the stellar debris is gravitationally bound to the BH and accretes at rates far above the Eddington limit, resulting in a bright flare and the formation of a “debris disk” on a timescale of weeks to months.
+                    Although TDEs are relatively rare, with a rate of one per 1,000 to 10,000 years per galaxy, they have a broad astrophysical implications.
+                </p>
 
-            <h3>Energy Dissipation in TDEs</h3>
+                <ol>
+                    <li>
+                        Only ~30% of galaxies host active galactic nuclei (AGN).
+                        TDEs provide a rare glimpse of the central BHs of the quiescent majority of galaxies, allowing astronomers to better understand the fueling modes for supermassive BHs and their growth mechanisms and evolution.
+                    </li>
+                    <li>
+                        TDEs also offer a clean laboratory for studying accretion physics because the accretion rate is set by only a handful of orbital and stellar structure parameters.
+                        The accretion rate sweeps through multiple accretion regimes, from super- to sub-Eddington, on relatively short timescales.
+                    </li>
+                    <li>
+                        The properties of TDE flares depend on the properties of the disrupted star.
+                        Therefore, TDEs probe the stellar populations and kinematics of the galactic centers where the majority of events are produced.
+                    </li>
+                </ol>
 
-            <p>
-                Working with Prof. Sasha Tchekhovskoy, Prof. Eric Coughlin, and Prof. Nicholas Stone, I use the smooth particle hydrodynamics (SPH) code PHANTOM and the general relativistic hydrodynamics (GRHD) code H-AMR, developed by <a href="https://www.matthewliska.com/">Matthew Liska</a>, to simulate deeply-penetrating tidal disruption events and the resulting debris disks.
-                In my first published work, I analyze these simulations to understand the physical processes that drive the circularization of the stellar debris.
-                I find that circularization of the most bound debris is dominated by periodic self-intersections caused by general relativistic precession and that circularization at later times is dominated by hydrodynamic instabilities at the debris-disk interface.
-            </p>
+                <h3>Energy Dissipation in TDEs</h3>
 
-            <img src="../static/images/debris-disk.jpeg" style="width: 100%">
-            <p class="caption" style="text-align: center;">from Andalman+2022</p>
+                <p>
+                    Working with Prof. Sasha Tchekhovskoy, Prof. Eric Coughlin, and Prof. Nicholas Stone, I use the smooth particle hydrodynamics (SPH) code PHANTOM and the general relativistic hydrodynamics (GRHD) code H-AMR, developed by <a href="https://www.matthewliska.com/">Matthew Liska</a>, to simulate deeply-penetrating tidal disruption events and the resulting debris disks.
+                    In my first published work, I analyze these simulations to understand the physical processes that drive the circularization of the stellar debris.
+                    I find that circularization of the most bound debris is dominated by periodic self-intersections caused by general relativistic precession and that circularization at later times is dominated by hydrodynamic instabilities at the debris-disk interface.
+                </p>
 
-            <h3>Current and Future Work</h3>
+                <img src="../static/images/debris-disk.jpeg" style="width: 100%">
+                <p class="caption" style="text-align: center;">from Andalman+2022</p>
 
-            <p>
-                I am currently working on new TDE simulations which incorporate magnetic fields to investigate the role of the magnetorotational instability (MRI) in driving circularization.
-                These simulations will also test the fossil disk hypothesis, which states that TDEs pick up the requisite magnetic flux to power a jet from a pre-existing accretion disk.
-                The new simulations will cover longer timescales than previous simulations, allowing me to probe the physics of the debris disk near the time of peak fallback.
-                I am also working on applying analytical models to my simulation data to understand how information about the debris disk geometry and viewing angle is encoded in TDE spectra.
-            </p>
+                <h3>Current and Future Work</h3>
 
-            <h3>Publications</h3>
+                <p>
+                    I am currently working on new TDE simulations which incorporate magnetic fields to investigate the role of the magnetorotational instability (MRI) in driving circularization.
+                    These simulations will also test the fossil disk hypothesis, which states that TDEs pick up the requisite magnetic flux to power a jet from a pre-existing accretion disk.
+                    The new simulations will cover longer timescales than previous simulations, allowing me to probe the physics of the debris disk near the time of peak fallback.
+                    I am also working on applying analytical models to my simulation data to understand how information about the debris disk geometry and viewing angle is encoded in TDE spectra.
+                </p>
 
-            <ul>
-                <li><u>Andalman, Z. L.</u>; Liska, M. T. P.; Tchekhovskoy, A.; Coughlin, E. R.; Stone, N. <i>Tidal Disruption Discs Formed and Fed by Stream-stream and Stream-disc Interactions in Global GRHD Simulations</i>, 2022, Monthly Notices of the Royal Astronomical Society, Volume 510, Issue 2, pp. 1627-1648, <a href="https://arxiv.org/abs/2008.04922">arXiv:2008.04922</a></li>
-            </ul>
+                <h3>Publications</h3>
 
-        </div>
+                <ul>
+                    <li><u>Andalman, Z. L.</u>; Liska, M. T. P.; Tchekhovskoy, A.; Coughlin, E. R.; Stone, N. <i>Tidal Disruption Discs Formed and Fed by Stream-stream and Stream-disc Interactions in Global GRHD Simulations</i>, 2022, Monthly Notices of the Royal Astronomical Society, Volume 510, Issue 2, pp. 1627-1648, <a href="https://arxiv.org/abs/2008.04922">arXiv:2008.04922</a></li>
+                </ul>
 
-        <div id="tweezer-description" class="research-description hidden">
+            </div>
 
-            <h3>What are Optical Tweezer Arrays?</h3>
+            <div id="tweezer-description" class="research-description hidden">
 
-            <p>
-                Optical tweezers are micrometer-sized optical traps obtained by tightly focusing a laser beam.
-                Optical techniques can diffract the beam into many spots, making it possible to form arrays of atoms in a variety of geometries.
-                In such an array, the interactions between atoms can be controlled by inducing quantum tunneling between array sites or by placing atoms into high-energy Rydberg states.
-                This property makes them great analog quantum simulators (AQS).
-            </p>
+                <h3>What are Optical Tweezer Arrays?</h3>
 
-            <p>
-                The quantum many-body problem encompasses a vast range of physical problems from Bose-Einstein condensation to the quark-gluon plasma of the early universe.
-                However, most quantum many-body systems are difficult to study directly and too complex to model on classical computers.
-                An AQS uses a controllable quantum system to mimic a less experimentally feasible one via a direct mapping from the Hamiltonian of the simulator to the Hamiltonian of the system.
-                By engineering the interactions of the simulator to closely match those of the system of interest, we can study the system indirectly.
-            </p>
+                <p>
+                    Optical tweezers are micrometer-sized optical traps obtained by tightly focusing a laser beam.
+                    Optical techniques can diffract the beam into many spots, making it possible to form arrays of atoms in a variety of geometries.
+                    In such an array, the interactions between atoms can be controlled by inducing quantum tunneling between array sites or by placing atoms into high-energy Rydberg states.
+                    This property makes them great analog quantum simulators (AQS).
+                </p>
 
-            <h3>Magneto-Optical Trap Control Box</h3>
+                <p>
+                    The quantum many-body problem encompasses a vast range of physical problems from Bose-Einstein condensation to the quark-gluon plasma of the early universe.
+                    However, most quantum many-body systems are difficult to study directly and too complex to model on classical computers.
+                    An AQS uses a controllable quantum system to mimic a less experimentally feasible one via a direct mapping from the Hamiltonian of the simulator to the Hamiltonian of the system.
+                    By engineering the interactions of the simulator to closely match those of the system of interest, we can study the system indirectly.
+                </p>
 
-            <p>
-                As part of Prof. Nir Navon's <a href="https://uqm.yale.edu/">Ultracold Quantum Matter Lab</a>, I worked on an apparatus capable of cooling bosonic Sr down to nano-Kelvin temperatures so that it could be captured by optical tweezers.
-                My key contribution was the design and construction of a control box for the electromagnetic coils of a magneto-optical trap (MOT).
-                The MOT consists of a set of counter-propagating lasers oriented along orthogonal axes and tuned to a frequency just below the transition frequency of the atom.
-                Due to the Doppler effect, only atoms moving towards one of the laser beams will see photons at the correct frequency to absorb them.
-                Many cycles of photon absorption and reemission tend to slow down atoms in the direction of the original photon velocity.
-                This results in an effective damping force proportional and opposite to the atom’s velocity.
-            </p>
+                <h3>Magneto-Optical Trap Control Box</h3>
 
-            <p>
-                The MOT also includes a quadrupole magnetic field generated by coils in an anti-Helmholtz configuration.
-                This causes a Zeeman shift in the transition frequency which increases with the atom’s displacement from the center of the MOT.
-                As an atom’s displacement increases, it has a lower threshold for transition, so it is more likely to absorb a photon.
-                This results in an effective restoring force proportional and opposite to the atom's displacement.
-                The combination of the restoring and damping forces results in a damped oscillator potential for a cloud of atoms which eventually brings all atoms to the center of the MOT at an ultracold temperature.
-            </p>
+                <p>
+                    As part of Prof. Nir Navon's <a href="https://uqm.yale.edu/">Ultracold Quantum Matter Lab</a>, I worked on an apparatus capable of cooling bosonic Sr down to nano-Kelvin temperatures so that it could be captured by optical tweezers.
+                    My key contribution was the design and construction of a control box for the electromagnetic coils of a magneto-optical trap (MOT).
+                    The MOT consists of a set of counter-propagating lasers oriented along orthogonal axes and tuned to a frequency just below the transition frequency of the atom.
+                    Due to the Doppler effect, only atoms moving towards one of the laser beams will see photons at the correct frequency to absorb them.
+                    Many cycles of photon absorption and reemission tend to slow down atoms in the direction of the original photon velocity.
+                    This results in an effective damping force proportional and opposite to the atom’s velocity.
+                </p>
 
-            <p>
-                The MOT coils must also be able to switch to a Helmholtz configuration to generate a near constant magnetic field of magnitude greater than 700 G to allow the usually forbidden  S  -  P  clock transition in Strontium.
-                The transition between Helmholtz and anti-Helmholtz configurations must occur in less than a millisecond to avoid unnecessary atom loss.
-                My control box switches between these configurations rapidly using insulated gate bipolar transistors (IGBTs) to operate a fast-switching H-bridge drawing up to 300 Amps.
-                The control box also includes a water cooling system, a temperature interlock, and a custom printed circuit board for running the control box from a digital display.
-            </p>
+                <p>
+                    The MOT also includes a quadrupole magnetic field generated by coils in an anti-Helmholtz configuration.
+                    This causes a Zeeman shift in the transition frequency which increases with the atom’s displacement from the center of the MOT.
+                    As an atom’s displacement increases, it has a lower threshold for transition, so it is more likely to absorb a photon.
+                    This results in an effective restoring force proportional and opposite to the atom's displacement.
+                    The combination of the restoring and damping forces results in a damped oscillator potential for a cloud of atoms which eventually brings all atoms to the center of the MOT at an ultracold temperature.
+                </p>
 
-            <img src="../static/images/MOT.jpg" style="width: 50%;">
+                <p>
+                    The MOT coils must also be able to switch to a Helmholtz configuration to generate a near constant magnetic field of magnitude greater than 700 G to allow the usually forbidden  S  -  P  clock transition in Strontium.
+                    The transition between Helmholtz and anti-Helmholtz configurations must occur in less than a millisecond to avoid unnecessary atom loss.
+                    My control box switches between these configurations rapidly using insulated gate bipolar transistors (IGBTs) to operate a fast-switching H-bridge drawing up to 300 Amps.
+                    The control box also includes a water cooling system, a temperature interlock, and a custom printed circuit board for running the control box from a digital display.
+                </p>
 
-            <h3>Other Projects</h3>
+                <img src="../static/images/MOT.jpg" style="width: 50%;">
 
-            <p>
-                During my time in AMO physics, I worked on several other projects, including the development of a new user interface for the parametric experimental control software Artiq, the application of convolution neural networks to the fast sorting of atom arrays via the assignment problem, the deployment of a network of sensors to monitor ambient lab conditions and log the data to an online database, and the alignment and testing of a double-pass acousto-optic modulator (AOM).
-            </p>
+                <h3>Other Projects</h3>
 
-        </div>
+                <p>
+                    During my time in AMO physics, I worked on several other projects, including the development of a new user interface for the parametric experimental control software Artiq, the application of convolution neural networks to the fast sorting of atom arrays via the assignment problem, the deployment of a network of sensors to monitor ambient lab conditions and log the data to an online database, and the alignment and testing of a double-pass acousto-optic modulator (AOM).
+                </p>
 
-        <div id="cubesat-description" class="research-description hidden">
+            </div>
 
-            <h3>Yale Undergraduate Aerospace Association</h3>
+            <div id="cubesat-description" class="research-description hidden">
 
-            <p>
-                <a href="https://yaleaerospace.org/">Yale Undergraduate Aerospace Association</a> (YUAA) is Yale's largest undergraduate engineering organization, with more than 80 members and several concurrent aerospace projects.
-                During my time at Yale, I worked on several projects with YUAA, eventually serving as co-president of the organization during my senior year in the 2022-23 academic year.
-                Through my time at YUAA, I learned how to manage people and push an organization to develop in alignment with shared values, for example, by engaging with the broader Yale and New Haven communities.
-            </p>
+                <h3>Yale Undergraduate Aerospace Association</h3>
 
-            <h3>BLAST CubeSat</h3>
+                <p>
+                    <a href="https://yaleaerospace.org/">Yale Undergraduate Aerospace Association</a> (YUAA) is Yale's largest undergraduate engineering organization, with more than 80 members and several concurrent aerospace projects.
+                    During my time at Yale, I worked on several projects with YUAA, eventually serving as co-president of the organization during my senior year in the 2022-23 academic year.
+                    Through my time at YUAA, I learned how to manage people and push an organization to develop in alignment with shared values, for example, by engaging with the broader Yale and New Haven communities.
+                </p>
 
-            <p>
-                In 2018, YUAA received a grant from NASA's <a href="https://www.nasa.gov/directorates/heo/home/CubeSats_initiative">CubeSat Launch Initiative</a> (CSLI) to develop the Bouchet Low Earth Alpha-Beta Space Telescope (BLAST), a 2U CubeSat with a cosmic ray detector payload, to be launched into Low Earth Orbit (LEO).
-                BLAST's main science objective is to detect high energy protons and map the changing morphology of the South Atlantic Anamoly (SAA), a region where the Earth's lower Van Allen Belt crosses LEO resulting in increased magnetic and charged particle fluxes.
-                The SAA impacts satellites by interfering with astronomical observations and producing memory errors through bit flips.
-                BLAST includes multiple interacting subsystems, including a gravity gradient boom and magnotorquers for attitude determination and control.
-            </p>
+                <h3>BLAST CubeSat</h3>
 
-            <img src="../static/images/cubesat.jpeg" style="width: 100%;">
+                <p>
+                    In 2018, YUAA received a grant from NASA's <a href="https://www.nasa.gov/directorates/heo/home/CubeSats_initiative">CubeSat Launch Initiative</a> (CSLI) to develop the Bouchet Low Earth Alpha-Beta Space Telescope (BLAST), a 2U CubeSat with a cosmic ray detector payload, to be launched into Low Earth Orbit (LEO).
+                    BLAST's main science objective is to detect high energy protons and map the changing morphology of the South Atlantic Anamoly (SAA), a region where the Earth's lower Van Allen Belt crosses LEO resulting in increased magnetic and charged particle fluxes.
+                    The SAA impacts satellites by interfering with astronomical observations and producing memory errors through bit flips.
+                    BLAST includes multiple interacting subsystems, including a gravity gradient boom and magnotorquers for attitude determination and control.
+                </p>
 
-            <p>
-                During my junior and senior years at Yale, I lead the design of the cosmic ray detector (CRD) payload.
-                The CRD consists of a plastic scintillator and a Silicon photomultiplier (SiPM).
-                The signal from the SiPM is processed by several amplification stages and our own multi-channel analyzer before count data is fed back to the on-board computer.
-                The project was funded in part by the Connecticut Space Grant Consortium and we presented our progress at a poster presentation at the Connecticut Space Grant expo.
-            </p>
+                <img src="../static/images/cubesat.jpeg" style="width: 100%;">
 
-            <img src="../static/images/CT-space.jpg" style="width: 67%;">
+                <p>
+                    During my junior and senior years at Yale, I lead the design of the cosmic ray detector (CRD) payload.
+                    The CRD consists of a plastic scintillator and a Silicon photomultiplier (SiPM).
+                    The signal from the SiPM is processed by several amplification stages and our own multi-channel analyzer before count data is fed back to the on-board computer.
+                    The project was funded in part by the Connecticut Space Grant Consortium and we presented our progress at a poster presentation at the Connecticut Space Grant expo.
+                </p>
 
-            <h3>Other Projects</h3>
+                <img src="../static/images/CT-space.jpg" style="width: 67%;">
 
-            <p>
-                During my time with YUAA, I worked on several smaller projects.
-            </p>
+                <h3>Other Projects</h3>
 
-            <ul>
-                <li>
-                    I worked on a team designing the rover payload for a rocket, to be flown at the Intercollegiate Rocket Engineering Competition (IREC).
-                    I developed an Arduino-based system to allow the rover to receive commands and stream video footage over the internet.
-                </li>
-                <li>
-                    I lead a small team designing and constructing an ornithopter, or robotic bird, capable of self-correcting flight.
-                    The ornithopter used high-torque servos to flap wings made of carbon fiber rods and kite fabric.
-                    By applying different offsets to the flapping cycle of the wings, we independently controlled roll, pitch, and yaw.
-                    The ornithopter included a custom printed circuit board which monitored acceleration and magnetic fields to calibrate steering and apply real-time corrections to its flight.
-                    The project was funded by the Connecticut Space Grant Consortium and culminated in a poster presentation at the Connecticut Space Grant expo.
-                </li>
-            </ul>
+                <p>
+                    During my time with YUAA, I worked on several smaller projects.
+                </p>
 
-            <h3>Community Outreach</h3>
+                <ul>
+                    <li>
+                        I worked on a team designing the rover payload for a rocket, to be flown at the Intercollegiate Rocket Engineering Competition (IREC).
+                        I developed an Arduino-based system to allow the rover to receive commands and stream video footage over the internet.
+                    </li>
+                    <li>
+                        I lead a small team designing and constructing an ornithopter, or robotic bird, capable of self-correcting flight.
+                        The ornithopter used high-torque servos to flap wings made of carbon fiber rods and kite fabric.
+                        By applying different offsets to the flapping cycle of the wings, we independently controlled roll, pitch, and yaw.
+                        The ornithopter included a custom printed circuit board which monitored acceleration and magnetic fields to calibrate steering and apply real-time corrections to its flight.
+                        The project was funded by the Connecticut Space Grant Consortium and culminated in a poster presentation at the Connecticut Space Grant expo.
+                    </li>
+                </ul>
 
-            <p>
-                I lead several outreach efforts through YUAA.
-            </p>
+                <h3>Community Outreach</h3>
 
-            <ul>
-                <li>
-                    I designed a <a href="https://portal.ct.gov/summerstemchallenge/-/media/Summer-Stem/WEEK-1-Rubber-Band-Powered-Toy-Car-Challenge-Project-Description--Rubric.pdf">challenge</a> for the Governor’s Summer STEM Challenge in CT.
-                    The challenge allowed middle school children to participate in a science-based competition during the COVID pandemic.
-                </li>
-                <li>
-                    I lead a <a href="https://onha.yale.edu/event/skys-limit-building-flying-model-aircraft-hosted-yale-aerospace-society">workshop</a> on the principles of flight with New Haven public school children.
-                    In the workshop, participants had the opportunity to build their own ornithopter while learning about fluid mechanics.
-                </li>
-            </ul>
+                <p>
+                    I lead several outreach efforts through YUAA.
+                </p>
 
-        </div>
+                <ul>
+                    <li>
+                        I designed a <a href="https://portal.ct.gov/summerstemchallenge/-/media/Summer-Stem/WEEK-1-Rubber-Band-Powered-Toy-Car-Challenge-Project-Description--Rubric.pdf">challenge</a> for the Governor’s Summer STEM Challenge in CT.
+                        The challenge allowed middle school children to participate in a science-based competition during the COVID pandemic.
+                    </li>
+                    <li>
+                        I lead a <a href="https://onha.yale.edu/event/skys-limit-building-flying-model-aircraft-hosted-yale-aerospace-society">workshop</a> on the principles of flight with New Haven public school children.
+                        In the workshop, participants had the opportunity to build their own ornithopter while learning about fluid mechanics.
+                    </li>
+                </ul>
 
-        <div id="disk-description" class="research-description hidden">
+            </div>
 
-            <h3>Thin Tilted Accretion Disks</h3>
+            <div id="disk-description" class="research-description hidden">
 
-            <p>
-                Standard black hole (BH) accretion disk models assume azimuthal symmetry about the spin axis of the BH.
-                However, in general this is not the case, because the spin axis of the BH and the spin axis of the accretion disk may be misaligned.
-                When there is a misalignment, the BH exerts a Lense-Thirring torque on the accretion disk, causing the disk to precess.
-                The torque varies with the cube of the distance from the BH, resulting in a differential torque which can tear the disk apart.
-                In a work lead by graduate student Nick Kaaz of Northwestern University, we perform GRMHD simulates of misaligned accretion systems and find that disk-tearing is associated with unique accretion mechanisms.
-                First, we find that nozzle shocks form on opposite sides of the disk, dissipating energy and driving accretion.
-                Second, we find that angular momentum exchanges at the point where two disk planes collide create low angular-momentum streamers which fall radially towards the BH.
-                I used my experience with tidal disruption events to help quantify the relative importance of these dissipation mechanisms.
-            </p>
+                <h3>Thin Tilted Accretion Disks</h3>
 
-            <img src="../static/images/tilted-disk.png" style="width: 67%;">
-            <p class="caption" style="text-align: center;">from Kaaz+2023</p>
+                <p>
+                    Standard black hole (BH) accretion disk models assume azimuthal symmetry about the spin axis of the BH.
+                    However, in general this is not the case, because the spin axis of the BH and the spin axis of the accretion disk may be misaligned.
+                    When there is a misalignment, the BH exerts a Lense-Thirring torque on the accretion disk, causing the disk to precess.
+                    The torque varies with the cube of the distance from the BH, resulting in a differential torque which can tear the disk apart.
+                    In a work lead by graduate student Nick Kaaz of Northwestern University, we perform GRMHD simulates of misaligned accretion systems and find that disk-tearing is associated with unique accretion mechanisms.
+                    First, we find that nozzle shocks form on opposite sides of the disk, dissipating energy and driving accretion.
+                    Second, we find that angular momentum exchanges at the point where two disk planes collide create low angular-momentum streamers which fall radially towards the BH.
+                    I used my experience with tidal disruption events to help quantify the relative importance of these dissipation mechanisms.
+                </p>
 
-            <h3>Publications</h3>
+                <img src="../static/images/tilted-disk.png" style="width: 67%;">
+                <p class="caption" style="text-align: center;">from Kaaz+2023</p>
 
-            <ul>
-                <li>Kaaz, N.; Liska, M. T. P.; Jacquemin-Ide, J.; Musoke, G.; West, A.; <u>Andalman, Z. L.</u>; Tchekhovskoy, A.; Oliver, P.; <i>Nozzle Shocks, Disk Tearing and Streamers Drive Rapid Accretion in 3D GRMHD Simulations of Warped Thin Disks</i>, accepted for publication to The Astrophysical Journal in 06/2023, <a href="https://arxiv.org/abs/2210.10053">arxiv:2210.10053</a></li>
-            </ul>
+                <h3>Publications</h3>
+
+                <ul>
+                    <li>Kaaz, N.; Liska, M. T. P.; Jacquemin-Ide, J.; Musoke, G.; West, A.; <u>Andalman, Z. L.</u>; Tchekhovskoy, A.; Oliver, P.; <i>Nozzle Shocks, Disk Tearing and Streamers Drive Rapid Accretion in 3D GRMHD Simulations of Warped Thin Disks</i>, accepted for publication to The Astrophysical Journal in 06/2023, <a href="https://arxiv.org/abs/2210.10053">arxiv:2210.10053</a></li>
+                </ul>
+
+            </div>
 
         </div>
 
@@ -272,7 +276,7 @@
     <div class="spacer"></div>
 
     <div id="footer">
-        <a href="mailto: zack.andalman@princeton.edu">zack.andalman@princeton.edu</a>
+        <p style="margin-top: 0.5em; text-align: center;"><a href="mailto: zack.andalman@princeton.edu">zack.andalman@princeton.edu</a></p>
     </div>
 
 </body>
