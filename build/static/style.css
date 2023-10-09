@@ -52,6 +52,7 @@ img.medium {
 	width: 100%;
 	text-align: center;
 	height: 6vh;
+	min-height: 2em;
 	margin: 0;
 	padding: 0;
 	font-size: 1.2em;
@@ -66,6 +67,7 @@ img.medium {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	z-index: 100;
 }
 
 .navitem {
