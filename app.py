@@ -15,6 +15,10 @@ def render_about():
 def render_research():
     return render_template("research.html")
 
+@app.route('/publications.html')
+def render_publications():
+    return render_template("publications.html")
+
 freezer = Freezer(app)
 
 if __name__ == '__main__':

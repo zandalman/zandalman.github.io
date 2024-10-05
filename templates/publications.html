@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div style="text-align: center;">
+
+        <div>
+          <div class="col" style="width: 5%;">
+            <h3>Year</h3>
+          </div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 15%;">
+            <h3>Authors</h3>
+          </div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 30%;">
+            <h3>Title</h3>
+          </div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 10%;">
+            <h3>Journal (ADS)</h3>
+          </div>
+        </div>
+
+        <hr style="width: 80%;">
+
+        <div class="kilonovae">
+          <div class="col" style="width: 5%;"><p style="text-align: center;">
+            2024
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 15%;"><p style="text-align: center;">
+            Z. L. Andalman, C. Fryer, C. Fontes, <i>et al.</i>
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 30%;"><p style="text-align: center;">
+            Thunderstorm: A Relativistic Electron Transport Code for Kilonovae Ejecta
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 10%;"><p style="text-align: center;">
+            in. prep.
+          </p></div>
+        </div>
+        
+        <div class="galaxies">
+          <div class="col" style="width: 5%;"><p style="text-align: center;">
+            2024
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 15%;"><p style="text-align: center;">
+            Z. L. Andalman, R. Teyssier, & A. Dekel
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 30%;"><p style="text-align: center;">
+            Why is Star Formation so Efficient in Massive Galaxies at Cosmic Dawn?
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 10%;"><p style="text-align: center;">
+            in. prep.
+          </p></div>
+        </div>
+        
+        <div class="accretion">
+          <div class="col" style="width: 5%;"><p style="text-align: center;">
+            2023
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 15%;"><p style="text-align: center;">
+            N. Kaaz, M. T. P. Liska, J. Jacquemin-Ide, <i>et al.</i> incl. Z. L. Andalman
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 30%;"><p style="text-align: center;">
+            Nozzle Shocks, Disk Tearing, and Streamers Drive Rapid Accretion in 3D GRMHD Simulations of Warped Thin Disks
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 10%;"><p style="text-align: center;">
+            <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...955...72K/abstract">ApJ</a>
+          </p></div>
+        </div>
+
+        <div class="first-author" class="tde">
+          <div class="col" style="width: 5%;"><p style="text-align: center;">
+            2022
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 15%;"><p style="text-align: center;">
+            Z. L. Andalman, M. T. P. Liska, A. Tchekhovskoy, <i>et al.</i>
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 30%;"><p style="text-align: center;">
+            Tidal Disruption Discs Formed and Fed by Stream-Stream and Stream-Disc Interactions in Global GRHD Simulations
+          </p></div>
+          <div class="col" style="width: 5%;"></div>
+          <div class="col" style="width: 10%;"><p style="text-align: center;">
+            <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.510.1627A/abstract">MNRAS</a>
+          </p></div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        $("#navbar").children().eq(3).addClass("active");
+    </script>
+{% endblock %}
