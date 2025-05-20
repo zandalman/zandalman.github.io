@@ -1,0 +1,1 @@
+Periodically, you may have to check https://github.com/actions/starter-workflows/blob/main/pages/static.yml to make sure that the workflow file is up-to-date. This can cause mysterious deployment errors.
