@@ -1,34 +1,51 @@
 $(document).ready(function () {
 
-    var placeIdx = 0;
+    // Define places with their names and dates
     var places = [
-        "Evanston",
-        "New-Haven",
-        "Santa-Cruz",
-        "Los-Alamos",
-        "Princeton"
+        { id: "Evanston", name: "Evanston, IL", date: "2015 - 2019" },
+        { id: "New-Haven", name: "New Haven, CT", date: "2019 - 2023" },
+        { id: "Santa-Cruz", name: "Santa Cruz, CA", date: "2022 (summer)" },
+        { id: "Los-Alamos", name: "Los Alamos, NM", date: "2024 (summer)" },
+        { id: "Princeton", name: "Princeton, NJ", date: "2023 - 2028" }
     ];
 
-    $(".dot").on("click", function () {
+    var placeIdx = 0;
 
+    function showPlace(idx) {
+        var place = places[idx];
+
+        // Update dots
         $(".dot").removeClass("active");
-        $(this).addClass("active");
+        $("#" + place.id).addClass("active");
 
-        placeInfoID = $(this).attr("id") + "-info";
+        // Update place info paragraphs
         $(".place-info").addClass("hidden");
-        $("#" + placeInfoID).removeClass("hidden");
+        $("#" + place.id + "-info").removeClass("hidden");
+
+        // Update nav
+        $("#current-place").text(place.name);
+        $("#current-date").text(place.date);
+    }
+
+    // Initial display
+    showPlace(placeIdx);
+
+    // Dot click
+    $(".dot").on("click", function () {
+        placeIdx = places.findIndex(p => p.id === $(this).attr("id"));
+        showPlace(placeIdx);
     });
 
+    // Next button
     $("#next").on("click", function () {
         placeIdx = (placeIdx + 1) % places.length;
-        placeId = places[placeIdx];
-        $("#" + placeId).click();
+        showPlace(placeIdx);
     });
 
+    // Previous button
     $("#previous").on("click", function () {
         placeIdx = (placeIdx + places.length - 1) % places.length;
-        placeId = places[placeIdx];
-        $("#" + placeId).click();
+        showPlace(placeIdx);
     });
 
 });

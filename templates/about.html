@@ -1,118 +1,108 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div style="text-align: center;">
+<!-- ===== About Section ===== -->
+<div class="about-container">
 
-        <div class="col" style="width: 90%; max-width: 500px;">
-
-            <img src="../static/images/me2.jpg" style="width: 90%; padding-top: 2em;">
-
+    <div class="about-columns">
+        <div class="headshot-column">
+            <img src="../static/images/me2.jpg" class="headshot" alt="Photo of Zack Andalman">
         </div>
 
-        <div class="col" style="width: 90%; max-width: 800px; font-size: 1.2em;">
-    max-width: 800px;
+        <div class="bio-column">
             <p>
-                I am a Department of Energy Computational Sciences Graduate Fellow and current Ph.D. candidate in the Princeton University Department of Astrophysical Sciences.
-                I use simulations to understand the physics of transients, a class of astrophysical phenomena which change brightness over human timescales (< years) such as supernovae, gamma ray bursts, and compact object mergers.
-                These energetic events often produce multi-messenger signals i.e. electromagnetic radiation, gravitational radiation, cosmic rays.
-            </p>
-
-            <p>
-                The current decade promises to be a golden age of transient astronomy, with new instruments like the Vera C. Rubin Observatory.
-                Simulations are an excellent tool for understanding how these events work because they often involved coupled non-linear physics.
-                One of my main research interests is tidal disruption events (TDEs), where a star is torn apart by the tidal field of a supermassive black hole (SMBH).
-                Recently, I've also done work on galaxy formation at Cosmic Dawn and electron thermalization in kilonovae ejecta.
+                I am a Ph.D. candidate in the Princeton University Department of Astrophysical Sciences and a Department of Energy Computational Sciences Graduate Fellow.
+                I use simulations and (semi-)analytics to understand the physics of tidal disruption events (TDEs), where a star is torn apart by the tidal field of a supermassive black hole (SMBH).
+                These rare events are unique astrophysical probes of quiescent SMBHs, accretion physics, and the dynamics of the galactic center.
+                The Vera C. Rubin Observatory's Legacy Survey of Space and Time (LSST) promises to dramatically increase the observed TDE rate, making this an exciting time for TDE modeling.
             </p>
 
             <p>
                 Outside of research, I am a triathlete and a jazz pianist.
-                Follow me on <a href="https://www.strava.com/athletes/34486092">Strava</a> and reach out if you want to jam.
-            </p>
-
-            <p>
                 Feel free to contact me for collaboration or outreach purposes!
             </p>
-
         </div>
-
     </div>
+</div>
 
-    <h2>My Academic Journey</h2>
+<!-- ===== Academic Journey Section ===== -->
+<h2 class="journey-header">My Academic Journey</h2>
 
-    <div style="text-align: center;">
-
-        <div class="col" style="position: relative; width: 90%; max-width: 800px;">
-            <span class="dot" id="Santa-Cruz" style="top: 48%; left: 11.5%;"></span>
-            <span class="dot active" id="Evanston" style="top: 34%; left: 64%;"></span>
-            <span class="dot" id="New-Haven" style="top: 24%; left: 84.5%;"></span>
-            <span class="dot" id="Princeton" style="top: 32.5%; left: 82%;"></span>
-            <span class="dot" id="Los-Alamos" style="top: 59%; left: 32%;"></span>
-            <img style='width: 100%;' src="../static/images/journey.png" alt="Map of my academic journey">
+<div class="journey-container">
+    <div class="journey-columns">
+        <div class="journey-map">
+            <span class="dot active" id="Evanston" data-title="Evanston, IL"></span>
+            <span class="dot" id="New-Haven" data-title="New Haven, CT"></span>
+            <span class="dot" id="Santa-Cruz" data-title="Santa Cruz, CA"></span>
+            <span class="dot" id="Los-Alamos" data-title="Los Alamos, NM"></span>
+            <span class="dot" id="Princeton" data-title="Princeton, NJ"></span>
+            <img src="../static/images/journey.png" alt="Map of my academic journey">
         </div>
 
-        <div class="col" style="position: relative; width: 90%; max-width: 500px;">
+        <div class="journey-info">
+            
+            <div class="journey-nav-row">
+                <div class="small button" id="previous">‹‹‹</div>
 
-            <div class="small button" id="next" style="position: absolute; top: 0; right: 0;"><p style="position: absolute; right: 40%; bottom: -40%;">>>></p></div>
-            <div class="small button" id="previous" style="position: absolute; top: 0; left: 0;"><p style="position: absolute; right: 40%; bottom: -40%;"><<<</p></div>
+                <div class="current-place-wrapper">
+                    <div class="current-place" id="current-place">Evanston, IL</div>
+                    <div class="current-date" id="current-date">2015 - 2019</div>
+                </div>
+
+                <div class="small button" id="next">›››</div>
+            </div>
 
             <div class="place-info" id="Evanston-info">
-                <h3>Evanston, IL</h3>
-                <h3>2015 - 2019</h3>
                 <p>
                     I grew up in Evanston, IL just North of Chicago where I attended Evanston Township High School (ETHS).
-                    During my junior and senior years at ETHS, I worked with Alexander "Sasha" Tchekhovskoy (Northwestern University) to analyze simulations of TDEs in the general relativistic magnetohydrodynamics code <a href="https://arxiv.org/abs/1912.10192">H-AMR</a>.
-                    I presented this work as posters at the 2018 and 2019 Blue Waters Symposium for Petascale Science and Beyond and as an invited talk at the 19th meeting of the High Energy Astrophysics Division.
+                    During my junior and senior years at ETHS, I worked with Sasha Tchekhovskoy (Northwestern University) on disk formation in TDEs using the GRMHD code H-AMR.
                 </p>
             </div>
 
             <div class="place-info hidden" id="New-Haven-info">
-                <h3>New Haven, CT</h3>
-                <h3>2019 - 2023</h3>
-                <p>
-                    I did undergrad at Yale University, where I studied physics and also took courses in anthropology and world literature.
-                    During my first and second years, I worked in Nir Navon's <a href="https://uqm.yale.edu/">Ultracold Quantum Matter Lab</a> building an apparatus to cool Strontium atoms to ultra-cold temperatures for use in optical tweezer experiments.
-                    However, I ultimately returned to astronomy, continuing my work with Sasha Tchekhovskoy.
-                    This resulted in a first-author publication on energy dissipation in TDEs and a co-author publication on accretion in thin misaligned disks.
-                    In my final year, I continued my work with Enrico Ramirez-Ruiz from the previous summer under the mentorship of Priya Natarajan for my senior thesis.
-                    Simultaneously, I was the president of the <a href="https://yaleaerospace.org/">Yale Undergraduate Aerospace Association</a>, the largest undergraduate engineering organization on campus.
-                    I lead the development of a cosmic ray detector for a CubeSat satellite and managed many other projects.
-                </p>
-            </div>
+            <p>
+                I did undergrad at Yale University, where I studied physics.
+                During my first two years, I worked in Nir Navon's Ultracold Quantum Matter Lab building a magneto-optical trap to cool Strontium atoms for an optical tweezer array.
+                After my second year, I returned to astronomy, continuing my work with Sasha Tchekhovskoy on disk formation in TDEs.
+                My work with Sasha resulted in a first-author publication.
+                I collaborated with Nick Kaaz on accretion in thin misaligned disks, resulting in a co-author publication.
+                During my final year, I worked with Enrico Ramirez-Ruiz and Priya Natarajan for my senior thesis.
+                Simultaneously, I was the president of the Yale Undergraduate Aerospace Association, where I led the development of a cosmic ray detector for a CubeSat among other projects.
+            </p>
+        </div>
 
-            <div class="place-info hidden" id="Santa-Cruz-info">
-                <h3>Santa Cruz, CA</h3>
-                <h3>2022 (summer)</h3>
-                <p>
-                    During the summer after my third year of undergrad, I worked with Enrico Ramirez-Ruiz (UCSC) at the <a href="https://lamat.science.ucsc.edu/">Lamat Institute</a> REU program to develop an analytic model for double-peaked Balmer line emission optical line emission in TDEs.
-                    I continued this work during my final year at Yale under the mentorship of Priya Natarajan.
-                    I presented this work as a poster at the 241st meeting of the American Astronomical Society and the 20th meeting of the High Energy Astrophysics Division.
-                </p>
-            </div>
+        <div class="place-info hidden" id="Santa-Cruz-info">
+            <p>
+                During the summer after my third year of undergrad, I worked with Enrico Ramirez-Ruiz at the <a href="https://lamat.science.ucsc.edu/">Lamat Institute</a> REU program to develop a semi-analytic model for double-peaked Balmer line emission in TDEs.
+                During my final year of undergrad, I continued this work with Priya Natarajan as my senior thesis.
+            </p>
+        </div>
 
-            <div class="place-info hidden" id="Los-Alamos-info">
-                <h3>Los Alamos, NM</h3>
-                <h3>2024 (summer)</h3>
-                <p>
-                    During the summer after my first year of graduate school, I worked with Chris Fryer at Los Alamos National Laboratory to develop a Monte Carlo electron transport code with applications to kilonovae ejecta.
-                </p>
-            </div>
+        <div class="place-info hidden" id="Los-Alamos-info">
+            <p>
+                During the summer after my first year of graduate school, I worked with Chris Fryer at Los Alamos National Laboratory to develop a model for the thermalization of beta particles in kilonova ejecta.
+                This work is still ongoing and we hope to submit the manuscript soon.
+            </p>
+        </div>
 
-            <div class="place-info hidden" id="Princeton-info">
-                <h3>Princeton, NJ</h3>
-                <h3>2023 - 2028</h3>
-                <p>
-                    I am currently a Ph.D. student at Princeton University in the Department of Astrophysical Sciences.
-                    In my first project, I worked with Romain Teyssier to simulate star formation in massive galaxies at cosmic dawn (z ~ 9) using the cosmological hydrodynamics code RAMSES.
-                    I am currently working with Eliot Quataert to develop an analytic model for the nozzle shock in tidal disruption events.
-                </p>
-            </div>
+        <div class="place-info hidden" id="Princeton-info">
+            <p>
+                I am currently a Ph.D. student at Princeton University in the Department of Astrophysical Sciences.
+                In my first year, I worked with Romain Teyssier to analyze star formation in massive galaxies at Cosmic Dawn using the hydrodynamics code RAMSES, resulting in a first-author publication.
+                I collaborated with <a href="https://james-sunseri.com/">James Sunseri</a> on a follow-up project on SMBH growth, resulting in a co-author publication.
+                In my second year, I started working with Eliot Quataert on TDEs for my Ph.D. thesis.
+                My first thesis paper is coming soon.
+            </p>
+        </div>
 
+        </div>
     </div>
+</div>
 
 {% endblock %}
 
 {% block script %}
-    <script>
-        $("#navbar").children().eq(1).addClass("active");
-    </script>
+<script>
+    $("#nav-about").addClass("active");
+</script>
 {% endblock %}

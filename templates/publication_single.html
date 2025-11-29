@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="pub-detail-container">
+
+  <h2>{{ pub.title }}</h2>
+  <p style="text-align: center;"><strong>{{ pub.authors_long|safe }}</strong></p>
+  <p style="text-align: center;"><em>{{ pub.journal }}</em> • {{ pub.year }}</p>
+
+  <hr>
+
+  <h3>Abstract</h3>
+  {% if pub.abstract %}
+    <p>{{ pub.abstract }}</p>
+  {% else %}
+    In progress.
+  {% endif %}
+
+  {% if pub.data_description %}
+  <hr>
+  <h3>Data description</h3>
+  <p>{{ pub.data_description }}</p>
+  {% endif %}
+
+  <hr>
+
+  <div class="pub-links">
+    {% if pub.link %}
+      <a href="{{ pub.link }}" class="detail-icon" title="DOI" target="_blank">
+        <img src="../../static/icons/link.svg" class="icon">
+      </a>
+    {% endif %}
+    {% if pub.arxiv %}
+      <a href="{{ pub.arxiv }}" class="detail-icon" title="arXiv" target="_blank">
+        <img src="../../static/icons/arxiv.svg" class="icon">
+      </a>
+    {% endif %}
+    {% if pub.pdf %}
+      <a href="../../static/papers/{{ pub.pdf }}" class="detail-icon" title="PDF" target="_blank">
+        <img src="../../static/icons/pdf.svg" class="icon">
+      </a>
+    {% endif %}
+    {% if pub.data %}
+      <a href="../../static/data/{{ pub.data }}" download title="data">
+          <img src="../../static/icons/data.svg" class="icon">
+      </a>
+      {% endif %}
+  </div>
+
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        $("#nav-publications").addClass("active");
+    </script>
+{% endblock %}

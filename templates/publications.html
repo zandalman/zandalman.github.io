@@ -1,124 +1,61 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div style="text-align: center;">
+<div id="publications-container">
 
-        <div>
-          <div class="col" style="width: 5%;">
-            <h3>Year</h3>
-          </div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;">
-            <h3>Authors</h3>
-          </div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;">
-            <h3>Title</h3>
-          </div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;">
-            <h3>Journal (ADS)</h3>
-          </div>
-        </div>
-
-        <hr style="width: 80%;">
-
-        <div class="first-author" class="tde">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2025
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            Z. L. Andalman, E. Quataert, E. Coughlin, <i>et al.</i>
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            Resolving the (Debate About) Compression in Deeply-Penetrating Tidal Disruption Events
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            in. prep.
-          </p></div>
-        </div>
-        
-        <div class="first-author" class="kilonovae">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2025
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            Z. L. Andalman, C. Fryer, C. Fontes, <i>et al.</i>
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            Thermalization in Kilonova Ejecta with Detailed Atomic, Nuclear, and Transport Physics
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            in. prep.
-          </p></div>
-        </div>
-        
-        <div class="first-author" class="galaxies">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2024
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            Z. L. Andalman, R. Teyssier, & A. Dekel
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            On the Origin of the High Star-Formation Efficiency in Massive Galaxies at Cosmic Dawn
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv241020530A/abstract">preprint</a>
-          </p></div>
-        </div>
-        
-        <div class="accretion">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2023
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            N. Kaaz, M. T. P. Liska, J. Jacquemin-Ide, <i>et al.</i> incl. Z. L. Andalman
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            Nozzle Shocks, Disk Tearing, and Streamers Drive Rapid Accretion in 3D GRMHD Simulations of Warped Thin Disks
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...955...72K/abstract">ApJ</a>
-          </p></div>
-        </div>
-
-        <div class="first-author" class="tde">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2022
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            Z. L. Andalman, M. T. P. Liska, A. Tchekhovskoy, <i>et al.</i>
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            Tidal Disruption Discs Formed and Fed by Stream-Stream and Stream-Disc Interactions in Global GRHD Simulations
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.510.1627A/abstract">MNRAS</a>
-          </p></div>
-        </div>
-
+    <div class="pub-row header">
+        <div class="pub-cell year">Year</div>
+        <div class="pub-cell authors">Authors</div>
+        <div class="pub-cell title">Title</div>
+        <div class="pub-cell journal">Journal</div>
+        <div class="pub-cell options">Options</div>
     </div>
+
+    {% for pub in publications %}
+    <div class="pub-row">
+        <div class="pub-cell year">{{ pub.year }}</div>
+        <div class="pub-cell authors">{{ pub.authors|safe }}</div>
+
+        <div class="pub-cell title">
+            <a href="{{ url_for('render_publication', pub_id=pub.id) }}">{{ pub.title }}</a>
+        </div>
+
+        <div class="pub-cell journal">{{ pub.journal }}</div>
+
+        <div class="pub-cell options">
+            {% if pub.link %}
+            <a href="{{ pub.link }}" target="_blank" title="journal">
+                <img src="../static/icons/link.svg" class="icon">
+            </a>
+            {% endif %}
+
+            {% if pub.arxiv %}
+            <a href="{{ pub.arxiv }}" target="_blank" title="arXiv">
+                <img src="../static/icons/arxiv.svg" class="icon">
+            </a>
+            {% endif %}
+
+            {% if pub.pdf %}
+            <a href="../static/papers/{{ pub.pdf }}" target="_blank" title="PDF">
+                <img src="../static/icons/pdf.svg" class="icon">
+            </a>
+            {% endif %}
+
+            {% if pub.data %}
+            <a href="../static/data/{{ pub.data }}" download title="data">
+                <img src="../static/icons/data.svg" class="icon">
+            </a>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
 
 {% endblock %}
 
 {% block script %}
     <script>
-        $("#navbar").children().eq(3).addClass("active");
+        $("#nav-publications").addClass("active");
     </script>
 {% endblock %}

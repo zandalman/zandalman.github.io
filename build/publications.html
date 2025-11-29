@@ -4,152 +4,234 @@
     <meta charset="UTF-8">
     <title>zandalman</title>
     <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
-    <link type="text/css" rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="/static/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="../static/js/main.js"></script>
+    <script src="/static/js/main.js"></script>
 </head>
+
 <body>
 
-    <ul id="navbar">
-        <li class='navitem'><a href="/">Home</a></li>
-        <li class='navitem'><a href="/about.html">About</a></li>
-        <li class='navitem'><a href="/research.html">Research</a></li>
-        <li class='navitem'><a href="/publications.html">Publications</a></li>
-    </ul>
+<nav id="navbar">
+    <div class="nav-left">
+        <span class="navname">Zack Andalman</span>
+        <a class="nav-email" href="mailto:zack.andalman@princeton.edu">zack.andalman@princeton.edu</a>
+    </div>
+    <div class="nav-right">
+        <a class="navitem" id="nav-home" href="/">Home</a>
+        <a class="navitem" id="nav-about" href="/about.html">About</a>
+        <a class="navitem" id="nav-publications" href="/publications.html">Publications</a>
+    </div>
+</nav>
 
-    <div class="spacer"></div>
+<div class="spacer"></div>
 
-    
 
-    <div style="text-align: center;">
 
-        <div>
-          <div class="col" style="width: 5%;">
-            <h3>Year</h3>
-          </div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;">
-            <h3>Authors</h3>
-          </div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;">
-            <h3>Title</h3>
-          </div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;">
-            <h3>Journal (ADS)</h3>
-          </div>
-        </div>
+<div id="publications-container">
 
-        <hr style="width: 80%;">
-
-        <div class="first-author" class="tde">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2025
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            Z. L. Andalman, E. Quataert, E. Coughlin, <i>et al.</i>
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            Resolving the (Debate About) Compression in Deeply-Penetrating Tidal Disruption Events
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            in. prep.
-          </p></div>
-        </div>
-        
-        <div class="first-author" class="kilonovae">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2025
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            Z. L. Andalman, C. Fryer, C. Fontes, <i>et al.</i>
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            Thermalization in Kilonova Ejecta with Detailed Atomic, Nuclear, and Transport Physics
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            in. prep.
-          </p></div>
-        </div>
-        
-        <div class="first-author" class="galaxies">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2024
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            Z. L. Andalman, R. Teyssier, & A. Dekel
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            On the Origin of the High Star-Formation Efficiency in Massive Galaxies at Cosmic Dawn
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv241020530A/abstract">preprint</a>
-          </p></div>
-        </div>
-        
-        <div class="accretion">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2023
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            N. Kaaz, M. T. P. Liska, J. Jacquemin-Ide, <i>et al.</i> incl. Z. L. Andalman
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            Nozzle Shocks, Disk Tearing, and Streamers Drive Rapid Accretion in 3D GRMHD Simulations of Warped Thin Disks
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...955...72K/abstract">ApJ</a>
-          </p></div>
-        </div>
-
-        <div class="first-author" class="tde">
-          <div class="col" style="width: 5%;"><p style="text-align: center;">
-            2022
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 15%;"><p style="text-align: center;">
-            Z. L. Andalman, M. T. P. Liska, A. Tchekhovskoy, <i>et al.</i>
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 30%;"><p style="text-align: center;">
-            Tidal Disruption Discs Formed and Fed by Stream-Stream and Stream-Disc Interactions in Global GRHD Simulations
-          </p></div>
-          <div class="col" style="width: 5%;"></div>
-          <div class="col" style="width: 10%;"><p style="text-align: center;">
-            <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.510.1627A/abstract">MNRAS</a>
-          </p></div>
-        </div>
-
+    <div class="pub-row header">
+        <div class="pub-cell year">Year</div>
+        <div class="pub-cell authors">Authors</div>
+        <div class="pub-cell title">Title</div>
+        <div class="pub-cell journal">Journal</div>
+        <div class="pub-cell options">Options</div>
     </div>
 
-
     
+    <div class="pub-row">
+        <div class="pub-cell year">2026</div>
+        <div class="pub-cell authors">Z. L. Andalman, E. Quataert, E. R. Coughlin, <i>et al.</i></div>
+
+        <div class="pub-cell title">
+            <a href="/publications/Andalman+2026a/">Resolving the (Debate About) Nozzle Shocks in Tidal Disruption Events</a>
+        </div>
+
+        <div class="pub-cell journal">in prep.</div>
+
+        <div class="pub-cell options">
+            
+
+            
+
+            
+
+            
+            <a href="../static/data/eos.zip" download title="data">
+                <img src="../static/icons/data.svg" class="icon">
+            </a>
+            
+        </div>
+    </div>
+    
+    <div class="pub-row">
+        <div class="pub-cell year">2026</div>
+        <div class="pub-cell authors">Z. L. Andalman, C. Fryer, C. Fontes, <i>et al.</i></div>
+
+        <div class="pub-cell title">
+            <a href="/publications/Andalman+2026b/">Thermalization in Kilonova Ejecta with Transport and Deatiled Microphysics</a>
+        </div>
+
+        <div class="pub-cell journal">in prep.</div>
+
+        <div class="pub-cell options">
+            
+
+            
+
+            
+
+            
+        </div>
+    </div>
+    
+    <div class="pub-row">
+        <div class="pub-cell year">2025</div>
+        <div class="pub-cell authors">J. Sunseri, Z. L. Andalman, & R. Teyssier</div>
+
+        <div class="pub-cell title">
+            <a href="/publications/Sunseri+2025/">Supermassive Black Hole Growth in Massive Galaxies at Cosmic Dawn</a>
+        </div>
+
+        <div class="pub-cell journal">preprint</div>
+
+        <div class="pub-cell options">
+            
+
+            
+            <a href="https://arxiv.org/pdf/2510.19822" target="_blank" title="arXiv">
+                <img src="../static/icons/arxiv.svg" class="icon">
+            </a>
+            
+
+            
+            <a href="../static/papers/Sunseri+2025.pdf" target="_blank" title="PDF">
+                <img src="../static/icons/pdf.svg" class="icon">
+            </a>
+            
+
+            
+        </div>
+    </div>
+    
+    <div class="pub-row">
+        <div class="pub-cell year">2025</div>
+        <div class="pub-cell authors">Z. L. Andalman, R. Teyssier, & A. Dekel</div>
+
+        <div class="pub-cell title">
+            <a href="/publications/Andalman+2025/">On the Origin of the High Star-Formation Efficiency in Massive Galaxies at Cosmic Dawn</a>
+        </div>
+
+        <div class="pub-cell journal">MNRAS</div>
+
+        <div class="pub-cell options">
+            
+            <a href="https://academic.oup.com/mnras/article/540/4/3350/8157902" target="_blank" title="journal">
+                <img src="../static/icons/link.svg" class="icon">
+            </a>
+            
+
+            
+            <a href="https://arxiv.org/abs/2410.20530" target="_blank" title="arXiv">
+                <img src="../static/icons/arxiv.svg" class="icon">
+            </a>
+            
+
+            
+            <a href="../static/papers/Andalman+2025.pdf" target="_blank" title="PDF">
+                <img src="../static/icons/pdf.svg" class="icon">
+            </a>
+            
+
+            
+            <a href="../static/data/sfr.zip" download title="data">
+                <img src="../static/icons/data.svg" class="icon">
+            </a>
+            
+        </div>
+    </div>
+    
+    <div class="pub-row">
+        <div class="pub-cell year">2023</div>
+        <div class="pub-cell authors">N. Kaaz, M. T. P. Liska, J. Jacquemin-Ide, <i>et al.</i></div>
+
+        <div class="pub-cell title">
+            <a href="/publications/Kaaz+2023/">Nozzle Shocks, Disk Tearing, and Streamers Drive Rapid Accretion in 3D GRMHD Simulations of Warped Thin Disks</a>
+        </div>
+
+        <div class="pub-cell journal">ApJ</div>
+
+        <div class="pub-cell options">
+            
+            <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ace051" target="_blank" title="journal">
+                <img src="../static/icons/link.svg" class="icon">
+            </a>
+            
+
+            
+            <a href="https://arxiv.org/abs/2210.10053" target="_blank" title="arXiv">
+                <img src="../static/icons/arxiv.svg" class="icon">
+            </a>
+            
+
+            
+            <a href="../static/papers/Kaaz+2023.pdf" target="_blank" title="PDF">
+                <img src="../static/icons/pdf.svg" class="icon">
+            </a>
+            
+
+            
+        </div>
+    </div>
+    
+    <div class="pub-row">
+        <div class="pub-cell year">2022</div>
+        <div class="pub-cell authors">Z. L. Andalman, M. T. P. Liska, A. Tchekhovskoy, E. R. Coughlin, & N. Stone</div>
+
+        <div class="pub-cell title">
+            <a href="/publications/Andalman+2022/">Tidal Disruption Discs Formed and Fed by Stream-Stream and Stream-Disc Interactions in Global GRHD Simulations</a>
+        </div>
+
+        <div class="pub-cell journal">MNRAS</div>
+
+        <div class="pub-cell options">
+            
+            <a href="https://academic.oup.com/mnras/article/510/2/1627/6446812" target="_blank" title="journal">
+                <img src="../static/icons/link.svg" class="icon">
+            </a>
+            
+
+            
+            <a href="https://arxiv.org/abs/2008.04922" target="_blank" title="arXiv">
+                <img src="../static/icons/arxiv.svg" class="icon">
+            </a>
+            
+
+            
+            <a href="../static/papers/Andalman+2022.pdf" target="_blank" title="PDF">
+                <img src="../static/icons/pdf.svg" class="icon">
+            </a>
+            
+
+            
+        </div>
+    </div>
+    
+
+</div>
+
+
+
     <script>
-        $("#navbar").children().eq(3).addClass("active");
+        $("#nav-publications").addClass("active");
     </script>
 
 
-    <div class="spacer"></div>
-
-    <div id="footer">
-        <p style="margin-top: 0.5em; text-align: center;"><a href="mailto: zack.andalman@princeton.edu">zack.andalman@princeton.edu</a></p>
-    </div>
+<div class="spacer"></div>
 
 </body>
 </html>

@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <title>zandalman</title>
     <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
-    <link type="text/css" rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="../static/js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
+
 <body>
 
-    <ul id="navbar">
-        <li class='navitem'><a href="/">Home</a></li>
-        <li class='navitem'><a href="/about.html">About</a></li>
-        <li class='navitem'><a href="/research.html">Research</a></li>
-        <li class='navitem'><a href="/publications.html">Publications</a></li>
-    </ul>
-
-    <div class="spacer"></div>
-
-    {% block content %}{% endblock %}
-    {% block script %}{% endblock %}
-
-    <div class="spacer"></div>
-
-    <div id="footer">
-        <p style="margin-top: 0.5em; text-align: center;"><a href="mailto: zack.andalman@princeton.edu">zack.andalman@princeton.edu</a></p>
+<nav id="navbar">
+    <div class="nav-left">
+        <span class="navname">Zack Andalman</span>
+        <a class="nav-email" href="mailto:zack.andalman@princeton.edu">zack.andalman@princeton.edu</a>
     </div>
+    <div class="nav-right">
+        <a class="navitem" id="nav-home" href="/">Home</a>
+        <a class="navitem" id="nav-about" href="/about.html">About</a>
+        <a class="navitem" id="nav-publications" href="/publications.html">Publications</a>
+    </div>
+</nav>
+
+<div class="spacer"></div>
+
+{% block content %}{% endblock %}
+{% block script %}{% endblock %}
+
+<div class="spacer"></div>
 
 </body>
 </html>

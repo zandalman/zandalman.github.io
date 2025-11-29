@@ -1,24 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1>Zack Andalman: Astrophysics Ph.D. Candidate</h1>
-    <h2 class="subheader"><a href="https://www.krellinst.org/csgf/" target="blank">Department of Energy Computational Science Graduate Fellow</a></h2>
-    <h2 class="subheader"><a href="https://web.astro.princeton.edu/" target="blank">Princeton University Department of Astrophysical Sciences</a></h2>
+    <h1 class="page-title">Zack Andalman</h1>
+    <h2 class="subtitle">Astrophysics Ph.D. Candidate</h2>
 
-    <div style="text-align: center; position: relative;">
-        <img style="border-radius: 10px; width: 90%; max-width: 800px;" src='../static/images/sky.JPG' alt="The Milky Way over Shark Fin Cove">
-        <p style="text-align: center; font-size: 10px;">Photo Credit: Piramon Kumnurdmanee</p>
+    <div class="affiliations">
+        <a href="https://web.astro.princeton.edu/" target="_blank">Princeton University, Department of Astrophysical Sciences</a>
+        <a href="https://www.krellinst.org/csgf/" target="_blank">DOE Computational Science Graduate Fellow</a>
     </div>
 
+    <figure class="hero-image">
+        <img src="../static/images/sky.JPG" alt="The Milky Way over Shark Fin Cove">
+        <figcaption>Photo Credit: Piramon Kumnurdmanee</figcaption>
+    </figure>
+
     <div id="button-holder">
-        <a href="https://arxiv.org/a/andalman_z_1.html" target="blank"><div class="button" id="publications"><p>Publications</p></div></a>
-        <a href="../static/resume.pdf" target="blank"><div class="button" id="CV"><p>Curriculum Vitae</p></div></a>
+        <a class="button" href="https://tinyurl.com/43s869ur" target="_blank">ADS</a>
+        <a class="button" href="https://arxiv.org/a/andalman_z_1.html" target="_blank">ArXiv</a>
+        <a class="button" href="../static/resume.pdf" target="_blank">CV</a>
     </div>
 
 {% endblock %}
 
 {% block script %}
     <script>
-        $("#navbar").children().eq(0).addClass("active");
+        $("#nav-home").addClass("active");
     </script>
 {% endblock %}
