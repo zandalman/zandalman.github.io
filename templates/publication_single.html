@@ -24,28 +24,60 @@
 
   <hr>
 
+  <div id="pub-detail-legend">
+    <span class="legend-item">
+        <img src="../../static/icons/link.svg" class="legend-icon">
+        go to journal
+    </span>
+
+    <span class="legend-item">
+        <img src="../../static/icons/arxiv.svg" class="legend-icon">
+        go to arXiv
+    </span>
+
+    <span class="legend-item">
+        <img src="../../static/icons/pdf.svg" class="legend-icon">
+        open PDF
+    </span>
+
+    <span class="legend-item">
+        <img src="../../static/icons/data.svg" class="legend-icon">
+        download data
+    </span>
+  </div>
+
   <div class="pub-links">
     {% if pub.link %}
-      <a href="{{ pub.link }}" class="detail-icon" title="DOI" target="_blank">
+      <a href="{{ pub.link }}" class="detail-icon" title="go to journal" target="_blank">
         <img src="../../static/icons/link.svg" class="icon">
       </a>
     {% endif %}
     {% if pub.arxiv %}
-      <a href="{{ pub.arxiv }}" class="detail-icon" title="arXiv" target="_blank">
+      <a href="{{ pub.arxiv }}" class="detail-icon" title="go to arXiv" target="_blank">
         <img src="../../static/icons/arxiv.svg" class="icon">
       </a>
     {% endif %}
     {% if pub.pdf %}
-      <a href="../../static/papers/{{ pub.pdf }}" class="detail-icon" title="PDF" target="_blank">
+      <a href="../../static/papers/{{ pub.pdf }}" class="detail-icon" title="open PDF" target="_blank">
         <img src="../../static/icons/pdf.svg" class="icon">
       </a>
     {% endif %}
     {% if pub.data %}
-      <a href="../../static/data/{{ pub.data }}" download title="data">
+      <a href="../../static/data/{{ pub.data }}" download title="download data">
           <img src="../../static/icons/data.svg" class="icon">
       </a>
       {% endif %}
   </div>
+
+  {% if pub.fig %}
+  <hr>
+  <div class="pub-figure">
+      <img src="../../static/paper_images/{{ pub.fig }}" alt="figure for {{ pub.id }}">
+      {% if pub.fig_caption %}
+      <div class="pub-figure-caption">{{ pub.fig_caption }}</div>
+      {% endif %}
+  </div>
+  {% endif %}
 
 </div>
 

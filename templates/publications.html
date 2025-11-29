@@ -1,12 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div id="pub-legend">
+    <span class="legend-item">
+        <img src="../static/icons/link.svg" class="legend-icon">
+        go to journal
+    </span>
+
+    <span class="legend-item">
+        <img src="../static/icons/arxiv.svg" class="legend-icon">
+        go to arXiv
+    </span>
+
+    <span class="legend-item">
+        <img src="../static/icons/pdf.svg" class="legend-icon">
+        open PDF
+    </span>
+
+    <span class="legend-item">
+        <img src="../static/icons/data.svg" class="legend-icon">
+        download data
+    </span>
+</div>
+
 <div id="publications-container">
 
     <div class="pub-row header">
         <div class="pub-cell year">Year</div>
         <div class="pub-cell authors">Authors</div>
-        <div class="pub-cell title">Title</div>
+        <div class="pub-cell title">Title (click for abstract)</div>
         <div class="pub-cell journal">Journal</div>
         <div class="pub-cell options">Options</div>
     </div>
@@ -24,25 +46,25 @@
 
         <div class="pub-cell options">
             {% if pub.link %}
-            <a href="{{ pub.link }}" target="_blank" title="journal">
+            <a href="{{ pub.link }}" target="_blank" title="go to journal">
                 <img src="../static/icons/link.svg" class="icon">
             </a>
             {% endif %}
 
             {% if pub.arxiv %}
-            <a href="{{ pub.arxiv }}" target="_blank" title="arXiv">
+            <a href="{{ pub.arxiv }}" target="_blank" title="go to arXiv">
                 <img src="../static/icons/arxiv.svg" class="icon">
             </a>
             {% endif %}
 
             {% if pub.pdf %}
-            <a href="../static/papers/{{ pub.pdf }}" target="_blank" title="PDF">
+            <a href="../static/papers/{{ pub.pdf }}" target="_blank" title="open PDF">
                 <img src="../static/icons/pdf.svg" class="icon">
             </a>
             {% endif %}
 
             {% if pub.data %}
-            <a href="../static/data/{{ pub.data }}" download title="data">
+            <a href="../static/data/{{ pub.data }}" download title="download data">
                 <img src="../static/icons/data.svg" class="icon">
             </a>
             {% endif %}
