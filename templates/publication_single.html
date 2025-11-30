@@ -24,48 +24,38 @@
 
   <hr>
 
-  <div id="pub-detail-legend">
-    <span class="legend-item">
-        <img src="../../static/icons/link.svg" class="legend-icon">
-        go to journal
-    </span>
-
-    <span class="legend-item">
-        <img src="../../static/icons/arxiv.svg" class="legend-icon">
-        go to arXiv
-    </span>
-
-    <span class="legend-item">
-        <img src="../../static/icons/pdf.svg" class="legend-icon">
-        open PDF
-    </span>
-
-    <span class="legend-item">
-        <img src="../../static/icons/data.svg" class="legend-icon">
-        download data
-    </span>
-  </div>
-
   <div class="pub-links">
     {% if pub.link %}
-      <a href="{{ pub.link }}" class="detail-icon" title="go to journal" target="_blank">
-        <img src="../../static/icons/link.svg" class="icon">
-      </a>
+      <span class="legend-item">
+        <a href="{{ pub.link }}" class="detail-icon" title="go to journal" target="_blank">
+          <img src="../../static/icons/link.svg" class="icon">
+        </a>
+        go to journal
+      </span>
     {% endif %}
     {% if pub.arxiv %}
-      <a href="{{ pub.arxiv }}" class="detail-icon" title="go to arXiv" target="_blank">
-        <img src="../../static/icons/arxiv.svg" class="icon">
-      </a>
+      <span class="legend-item">
+        <a href="{{ pub.arxiv }}" class="detail-icon" title="go to arXiv" target="_blank">
+          <img src="../../static/icons/arxiv.svg" class="icon">
+        </a>
+        go to arXiv
+      </span>
     {% endif %}
     {% if pub.pdf %}
-      <a href="../../static/papers/{{ pub.pdf }}" class="detail-icon" title="open PDF" target="_blank">
-        <img src="../../static/icons/pdf.svg" class="icon">
-      </a>
+      <span class="legend-item">
+        <a href="../../static/papers/{{ pub.pdf }}" class="detail-icon" title="open PDF" target="_blank">
+          <img src="../../static/icons/pdf.svg" class="icon">
+        </a>
+        open PDF
+      </span>
     {% endif %}
     {% if pub.data %}
-      <a href="../../static/data/{{ pub.data }}" download title="download data">
-          <img src="../../static/icons/data.svg" class="icon">
-      </a>
+      <span class="legend-item">
+        <a href="../../static/data/{{ pub.data }}" download title="download data">
+            <img src="../../static/icons/data.svg" class="icon">
+        </a>
+        download data
+      </span>
       {% endif %}
   </div>
 
@@ -84,7 +74,4 @@
 {% endblock %}
 
 {% block script %}
-    <script>
-        $("#nav-publications").addClass("active");
-    </script>
 {% endblock %}

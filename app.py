@@ -1,6 +1,6 @@
 from flask import Flask, render_template, abort
 from flask_frozen import Freezer
-from publications import publications
+from data import publications, research
 
 app = Flask(__name__)
 
@@ -11,6 +11,10 @@ def render_index():
 @app.route('/about.html')
 def render_about():
     return render_template("about.html")
+
+@app.route('/research.html')
+def render_research():
+    return render_template("research.html", research=research)
 
 @app.route('/publications.html')
 def render_publications():

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="research-container">
+
+  <!-- Left side: clickable research items -->
+  <div id="research-menu">
+    <h3 class="research-menu-title">Research Areas</h3>
+    {% for item in research %}
+      <div class="research-menu-item" data-target="{{ item.id }}">
+        <img src="{{ url_for('static', filename='research_images/' ~ item.image) }}">
+        <span>{{ item.name }}</span>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Right side: content -->
+  <div id="research-content">
+
+    {% for item in research %}
+      <div class="research-block" id="block-{{ item.id }}">
+
+        <h2>{{ item.name }}</h2>
+
+        <div class="research-text">
+          {% for paragraph in item.text %}
+            <p>{{ paragraph|safe }}</p>
+          {% endfor %}
+        </div>
+
+        {% if item.pub_ids %}
+        <div class="pub-list">
+          <strong>Publications</strong>
+          {% for i in range(item.pub_ids|length) %}
+            <div class="pub-item">
+              <span class="pub-number">[{{ i + 1 }}]</span>
+              <a href="{{ url_for('render_publication', pub_id=item.pub_ids[i]) }}">
+                {{ item.pub_text[i] }}
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div>
+    {% endfor %}
+
+  </div>
+
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+    $("#nav-research").addClass("active");
+
+    $(".research-menu-item").first().addClass("active");
+    $("#research-content .research-block").addClass("hidden")
+                                      .first().removeClass("hidden");
+
+    $(".research-menu-item").on("click", function() {
+        let id = $(this).data("target");
+
+        // highlight left menu item
+        $(".research-menu-item").removeClass("active");
+        $(this).addClass("active");
+
+        // swap content
+        $(".research-block").addClass("hidden");
+        $("#block-" + id).removeClass("hidden");
+    });
+</script>
+{% endblock %}

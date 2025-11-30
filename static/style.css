@@ -140,6 +140,17 @@ img.medium {
 .affiliations a {
     display: block;
     margin: 4px 0;
+    color: #1a66cc;
+}
+
+.affiliations a:visited {
+  color: #144a99;   /* darker version */
+}
+
+.affiliations a:hover,
+.affiliations a:focus {
+  color: #0055cc;   /* brighter on hover */
+  text-decoration: underline;
 }
 
 .hero-image {
@@ -200,10 +211,36 @@ img.medium {
     border-radius: 12px;
 }
 
+.headshot-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
 .bio-column {
     max-width: 600px;
     font-size: 1.15rem;
     line-height: 1.55;
+}
+
+.mini-gallery {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;   /* centers items horizontally */
+    flex-wrap: wrap;
+    width: 100%;                /* ensures it spans the column */
+    text-align: center;         /* fallback centering */
+}
+
+.mini-img {
+    width: 40%;       /* Small but visible */
+    height: 40%;
+    max-width: 160px;
+    max-height: 160px;
+    object-fit: cover; /* Avoid stretching */
+    border-radius: 6px;
 }
 
 /* ------------------------------
@@ -584,28 +621,146 @@ img.medium {
     line-height: 1.3;
 }
 
-#pub-detail-legend {
-    display: flex;
-    justify-content: center;   /* aligns with the content block */
-    gap: 1.5rem;
-    margin: 0.5rem 0 1rem 0;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-#pub-detail-legend .legend-item {
+.pub-links .legend-item {
     display: flex;
     align-items: center;
     gap: 0.4rem;
     white-space: nowrap;
+    color: var(--text-muted);
 }
 
-#pub-detail-legend .legend-icon {
-    width: 1.15em;
-    height: 1.15em;
-    opacity: 0.8;
-}
-
-#pub-detail-legend .legend-item:hover .legend-icon {
+.pub-links .legend-item:hover {
     opacity: 1;
+}
+
+/* ------------------------------
+   RESEARCH PAGE
+   ------------------------------ */
+
+/* Container */
+#research-container {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem auto;   /* vertical margin + center horizontally */
+    max-width: 1200px;     /* optional, for very wide screens */
+    padding: 0 1.5rem;     /* horizontal padding */
+}
+
+/* Left menu */
+#research-menu {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    gap: 1rem;
+    flex-shrink: 0;
+    position: sticky;
+    top: 2rem;
+    align-self: flex-start;
+}
+
+.research-menu-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.research-menu-item {
+    padding: 0.75rem;
+    border: 4px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    background: #fafafa;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.research-menu-item:hover {
+    background: #eaeaea;
+    transform: translateY(-2px);
+}
+
+.research-menu-item img {
+    height: 80px;
+    margin-bottom: 0.5rem;
+    width: auto;
+}
+
+.research-menu-item span {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Right content */
+#research-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+#research-content h2 {
+    margin-top: 0;
+}
+
+.research-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Publication list */
+.pub-list .pub-item {
+    margin-bottom: 0.5rem;
+}
+
+.pub-number {
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.research-block.hidden {
+    display: none;
+}
+
+.research-menu-item.active {
+    background: #e8e8e8;
+    border-color: var(--accent, #444);
+}
+
+/* Mobile layout */
+@media screen and (max-width: 900px) {
+    #research-container {
+        flex-direction: column;
+    }
+
+    #research-menu {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: static;
+    }
+
+    .research-menu-item {
+        width: 140px;
+    }
+
+    #research-content {
+        max-width: 100%;
+    }
+}
+
+
+.pub-list a {
+  color: #1a66cc;   /* soft, classic link blue */
+}
+
+.pub-list a:visited {
+  color: #144a99;   /* darker version */
+}
+
+.pub-list a:hover,
+.pub-list a:focus {
+  color: #0055cc;   /* brighter on hover */
+  text-decoration: underline;
 }
