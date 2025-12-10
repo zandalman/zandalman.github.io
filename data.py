@@ -3,7 +3,7 @@ research = [
     "id": "tde",
     "name": "Tidal Disruption Events",
     "pub_ids": ["Andalman+2022", "Andalman+2026a"],
-    "pub_text": ["Andalman+2022, MNRAS", "Andalman+2026a, in prep."],
+    "pub_text": ["Andalman+2022, MNRAS", "Andalman+2026a, preprint"],
     "image": "tde.png",
     "text": [
       r"""
@@ -123,15 +123,31 @@ research = [
 
 publications = [
   {
-    "id": "Andalman+2026a",
+    "id": "Andalman+2026b",
     "year": 2026,
-    "authors": "Z. L. Andalman, E. Quataert, E. R. Coughlin, et al.",
-    "authors_long": "Z. L. Andalman, E. Quataert, E. R. Coughlin, & C. Nixon",
-    "title": "Resolving the (Debate About) Nozzle Shocks in Tidal Disruption Events",
+    "authors": "Z. L. Andalman, C. Fryer, C. Fontes, et al.",
+    "authors_long": "Z. L. Andalman, C. Fryer, C. Fontes, M. Mumpower, & R. Wollaeger",
+    "title": "Thermalization in Kilonova Ejecta with Transport and Detailed Microphysics",
     "journal": "in prep.",
     "link": None,
     "arxiv": None,
     "pdf": None,
+    "data": None,
+    "fig": None,
+    "data_description": None,
+    "fig_caption": None,
+    "abstract": None
+  },
+  {
+    "id": "Andalman+2026a",
+    "year": 2026,
+    "authors": "Z. L. Andalman, E. Quataert, E. R. Coughlin, et al.",
+    "authors_long": "Z. L. Andalman, E. Quataert, E. R. Coughlin, & C. J. Nixon",
+    "title": "Resolving the (Debate About) Nozzle Shocks in Tidal Disruption Events",
+    "journal": "preprint",
+    "link": None,
+    "arxiv": "https://arxiv.org/abs/2512.08928",
+    "pdf": "Andalman+2026a.pdf",
     "data": "eos.zip",
     "fig": "Andalman+2026a.png",
     "data_description": r"""
@@ -162,22 +178,6 @@ publications = [
     """
   },
   {
-    "id": "Andalman+2026b",
-    "year": 2026,
-    "authors": "Z. L. Andalman, C. Fryer, C. Fontes, et al.",
-    "authors_long": "Z. L. Andalman, C. Fryer, C. Fontes, M. Mumpower, & R. Wollaeger",
-    "title": "Thermalization in Kilonova Ejecta with Transport and Detailed Microphysics",
-    "journal": "in prep.",
-    "link": None,
-    "arxiv": None,
-    "pdf": None,
-    "data": None,
-    "fig": None,
-    "data_description": None,
-    "fig_caption": None,
-    "abstract": None
-  },
-  {
     "id": "Sunseri+2025",
     "year": 2025,
     "authors": "J. Sunseri, Z. L. Andalman, & R. Teyssier",
@@ -187,6 +187,7 @@ publications = [
     "link": None,
     "arxiv": "https://arxiv.org/pdf/2510.19822",
     "pdf": "Sunseri+2025.pdf",
+    "data": None,
     "fig": "Sunseri+2025.png",
     "data_description": None,
     "fig_caption": r"""
