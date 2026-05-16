@@ -2,8 +2,8 @@ research = [
   {
     "id": "tde",
     "name": "Tidal Disruption Events",
-    "pub_ids": ["Andalman+2022", "Andalman+2026a"],
-    "pub_text": ["Andalman+2022, MNRAS", "Andalman+2026a, preprint"],
+    "pub_ids": ["Andalman+2022", "Andalman+2026a", "Nixon+2026"],
+    "pub_text": ["Andalman+2022, MNRAS", "Andalman+2026a, preprint", "Nixon+2026, preprint"],
     "image": "tde.png",
     "text": [
       r"""
@@ -23,8 +23,10 @@ research = [
       r"""
       In [1], I perform one of the first simulations of debris disk formation in a realistic TDE using the GRMHD code H-AMR,
       although these simulations are limited to a small fraction of the peak fallback time.
-      In my ongoing work [2], I develop an idealized model to study the role of the nozzle shock in detail, 
+      In [2], I develop an idealized model to study the role of the nozzle shock in detail, 
       including the effect of chemical processes and the implications for the stream self-intersection.
+      In [3], we use analytic arguments and numerical experiments to highlight a numerical challenge in 3D TDE simulations;
+      namely, that the converging in-plane velocity field in the post-nozzle region produces anomalous dissipation.
       """
     ]
   },
@@ -61,8 +63,7 @@ research = [
       r"""
       The observation of GW170817 confirmed that binary neutron star mergers are not only strong sources of gravitational waves, but also sites of nucleosynthesis by the rapid neutron capture process (r-process). 
       The radioactive decay of r-process nuclides in the merger ejecta produces energetic gamma-rays, beta and alpha particles that, when thermalized, power a bright transient in the optical and near-infrared known as a kilonova (KN). 
-      In my ongoing work [1], I develop a new model for the transport and thermalization of beta decay electrons using the two-moment method
-      and detailed electron-atom cross sections.
+      In my ongoing work [1], I develop a new model for the transport and thermalization of beta decay electrons using detailed electron-atom cross sections.
       """
     ]
   },
@@ -122,12 +123,13 @@ research = [
 ]
 
 publications = [
-  {
+    {
     "id": "Andalman+2026b",
     "year": 2026,
     "authors": "Z. L. Andalman, C. Fryer, C. Fontes, et al.",
     "authors_long": "Z. L. Andalman, C. Fryer, C. Fontes, M. Mumpower, & R. Wollaeger",
     "title": "Thermalization in Kilonova Ejecta with Transport and Detailed Microphysics",
+    "tags": ["firstauthor", "kilonovae"],
     "journal": "in prep.",
     "link": None,
     "arxiv": None,
@@ -139,11 +141,44 @@ publications = [
     "abstract": None
   },
   {
+    "id": "Nixon+2026",
+    "year": 2026,
+    "authors": "C. J. Nixon, E. R. Coughlin, & Z. L. Andalman",
+    "authors_long": "C. J. Nixon, E. R. Coughlin, & Z. L. Andalman",
+    "title": "On the Origin of Anomalous Dissipation in Simulations of Tidal Disruption Events",
+    "tags": ["submitted", "tdes"],
+    "journal": "preprint",
+    "link": None,
+    "arxiv": None,
+    "pdf": "Nixon+2026.pdf",
+    "data": None,
+    "fig": "Nixon+2026.png",
+    "data_description": None,
+    "fig_caption": r"""
+    We simulate the tidal disruption of an n=3 polytrope star by a 10^6 Msol SMBH in the smooth particle hydrodynamics code PHANTOM using 10^6 particles.
+    We show the returning debris stream in our simulations roughly 50 days post-disruption, varying the artificial viscosity in each panel parameterized by alpha^AV and beta^AV.
+    As beta^AV increases, the stream fans out into wider angles after passing through pericenter due to anomalous dissipation triggered by the converging in-plane velocity field and the finite resolution.
+    However, low artificial viscosity (beta^AV < 0.2) is unphysical because particle-particle interactions are weak and the simulation fails to accurately capture the stream collision.
+    """,
+    "abstract": r"""
+    In a tidal disruption event (TDE), a star is pulled apart by the tidal field of a supermassive black hole. 
+    The stellar debris starts on highly elliptical orbits, and a longstanding question in TDE theory is: How does the stellar debris circularize into a disc and accrete? 
+    The originally proposed answer to this question is self-intersection shocks, where relativistic apsidal precession results in a strong collision between incoming and outgoing streams of material. 
+    However, global simulations of TDEs tend to find enhanced hydrodynamical dissipation prior to any intersections of the debris orbits, with the material "fanning out" into a wide-angle and partially-unbound outflow upon passing through pericenter. 
+    We show that this dissipation is numerical in origin and arises from a combination of
+    1) the change in the kinematics of the debris as it passes through pericenter, with its velocity profile along the stream transitioning from strongly diverging pre-pericenter to strongly converging post-pericenter,
+    and 2) the dependence of numerical algorithms (viscosity switches for particle-based methods and Riemann solvers for Godunov-based schemes) on the diverging vs.~converging nature of the fluid. 
+    We support this conclusion with analytical and numerical modeling. 
+    We discuss possible resolutions to these numerical issues as well as the implications of our findings in the context of observations.
+    """
+  },
+  {
     "id": "Andalman+2026a",
     "year": 2026,
     "authors": "Z. L. Andalman, E. Quataert, E. R. Coughlin, et al.",
     "authors_long": "Z. L. Andalman, E. Quataert, E. R. Coughlin, & C. J. Nixon",
     "title": "Resolving the (Debate About) Nozzle Shocks in Tidal Disruption Events",
+    "tags": ["firstauthor", "submitted", "tdes"],
     "journal": "preprint",
     "link": None,
     "arxiv": "https://arxiv.org/abs/2512.08928",
@@ -183,6 +218,7 @@ publications = [
     "authors": "J. Sunseri, Z. L. Andalman, & R. Teyssier",
     "authors_long": "J. Sunseri, Z. L. Andalman, & R. Teyssier",
     "title": "Supermassive Black Hole Growth in Massive Galaxies at Cosmic Dawn",
+    "tags": ["submitted", "galaxies"],
     "journal": "preprint",
     "link": None,
     "arxiv": "https://arxiv.org/pdf/2510.19822",
@@ -217,6 +253,7 @@ publications = [
     "authors": "Z. L. Andalman, R. Teyssier, & A. Dekel",
     "authors_long": "Z. L. Andalman, R. Teyssier, & A. Dekel",
     "title": "On the Origin of the High Star-Formation Efficiency in Massive Galaxies at Cosmic Dawn",
+    "tags": ["firstauthor", "published", "submitted", "galaxies"],
     "journal": "MNRAS",
     "link": "https://academic.oup.com/mnras/article/540/4/3350/8157902",
     "arxiv": "https://arxiv.org/abs/2410.20530",
@@ -253,6 +290,7 @@ publications = [
     "authors": "N. Kaaz, M. T. P. Liska, J. Jacquemin-Ide, et al.",
     "authors_long": "N. Kaaz, M. T. P. Liska, J. Jacquemin-Ide, Z. L. Andalman, G. Musoke, A. Tchekhovskoy, & O. Porth",
     "title": "Nozzle Shocks, Disk Tearing, and Streamers Drive Rapid Accretion in 3D GRMHD Simulations of Warped Thin Disks",
+    "tags": ["published", "submitted"],
     "journal": "ApJ",
     "link": "https://iopscience.iop.org/article/10.3847/1538-4357/ace051",
     "arxiv": "https://arxiv.org/abs/2210.10053",
@@ -287,6 +325,7 @@ publications = [
     "authors": "Z. L. Andalman, M. T. P. Liska, A. Tchekhovskoy, et al.",
     "authors": "Z. L. Andalman, M. T. P. Liska, A. Tchekhovskoy, E. R. Coughlin, & N. Stone",
     "title": "Tidal Disruption Discs Formed and Fed by Stream-Stream and Stream-Disc Interactions in Global GRHD Simulations",
+    "tags": ["firstauthor", "published", "submitted", "tdes"],
     "journal": "MNRAS",
     "link": "https://academic.oup.com/mnras/article/510/2/1627/6446812",
     "arxiv": "https://arxiv.org/abs/2008.04922",

@@ -33,6 +33,46 @@
 
 
 
+<div class="filters">
+
+  <div class="filter-group">
+    <label>
+      <input type="checkbox" data-tag="tdes" class="filter-topic">
+      TDEs
+    </label>
+
+    <label>
+      <input type="checkbox" data-tag="kilonovae" class="filter-topic">
+      Kilonovae
+    </label>
+
+    <label>
+      <input type="checkbox" data-tag="galaxies" class="filter-topic">
+      Galaxies
+    </label>
+  </div>
+
+  <div class="filter-group">
+    <label>
+      <input type="checkbox" data-tag="submitted" class="filter-status">
+      Submitted
+    </label>
+
+    <label>
+      <input type="checkbox" data-tag="published" class="filter-status">
+      Published
+    </label>
+  </div>
+
+  <div class="filter-group">
+    <label>
+      <input type="checkbox" data-tag="firstauthor" class="filter-indep">
+      First author
+    </label>
+  </div>
+
+</div>
+
 <div id="pub-legend">
     <span class="legend-item">
         <img src="../static/icons/link.svg" class="legend-icon">
@@ -66,7 +106,7 @@
     </div>
 
     
-    <div class="pub-row">
+    <div class="pub-row pub-content firstauthor kilonovae">
         <div class="pub-cell year">2026</div>
         <div class="pub-cell authors">Z. L. Andalman, C. Fryer, C. Fontes, et al.</div>
 
@@ -87,7 +127,32 @@
         </div>
     </div>
     
-    <div class="pub-row">
+    <div class="pub-row pub-content submitted tdes">
+        <div class="pub-cell year">2026</div>
+        <div class="pub-cell authors">C. J. Nixon, E. R. Coughlin, & Z. L. Andalman</div>
+
+        <div class="pub-cell title">
+            <a href="/publications/Nixon+2026/">On the Origin of Anomalous Dissipation in Simulations of Tidal Disruption Events</a>
+        </div>
+
+        <div class="pub-cell journal">preprint</div>
+
+        <div class="pub-cell options">
+            
+
+            
+
+            
+            <a href="../static/papers/Nixon+2026.pdf" target="_blank" title="open PDF">
+                <img src="../static/icons/pdf.svg" class="icon">
+            </a>
+            
+
+            
+        </div>
+    </div>
+    
+    <div class="pub-row pub-content firstauthor submitted tdes">
         <div class="pub-cell year">2026</div>
         <div class="pub-cell authors">Z. L. Andalman, E. Quataert, E. R. Coughlin, et al.</div>
 
@@ -120,7 +185,7 @@
         </div>
     </div>
     
-    <div class="pub-row">
+    <div class="pub-row pub-content submitted galaxies">
         <div class="pub-cell year">2025</div>
         <div class="pub-cell authors">J. Sunseri, Z. L. Andalman, & R. Teyssier</div>
 
@@ -149,7 +214,7 @@
         </div>
     </div>
     
-    <div class="pub-row">
+    <div class="pub-row pub-content firstauthor published submitted galaxies">
         <div class="pub-cell year">2025</div>
         <div class="pub-cell authors">Z. L. Andalman, R. Teyssier, & A. Dekel</div>
 
@@ -186,7 +251,7 @@
         </div>
     </div>
     
-    <div class="pub-row">
+    <div class="pub-row pub-content published submitted">
         <div class="pub-cell year">2023</div>
         <div class="pub-cell authors">N. Kaaz, M. T. P. Liska, J. Jacquemin-Ide, et al.</div>
 
@@ -219,7 +284,7 @@
         </div>
     </div>
     
-    <div class="pub-row">
+    <div class="pub-row pub-content firstauthor published submitted tdes">
         <div class="pub-cell year">2022</div>
         <div class="pub-cell authors">Z. L. Andalman, M. T. P. Liska, A. Tchekhovskoy, E. R. Coughlin, & N. Stone</div>
 
@@ -259,6 +324,58 @@
 
     <script>
         $("#nav-publications").addClass("active");
+
+        const statusBoxes = document.querySelectorAll('.filter-status');
+        const topicBoxes = document.querySelectorAll('.filter-topic');
+        const indepBoxes = document.querySelectorAll('.filter-indep');
+        const rows = document.querySelectorAll('.pub-content');
+
+        // topic boxes are mutually exclusive
+        topicBoxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                if (cb.checked) {
+                    topicBoxes.forEach(other => {
+                        if (other !== cb) {
+                            other.checked = false;
+                        }
+                    });
+                }
+                updateFilters();
+            });
+        });
+        
+        // status boxes are mutually exclusive
+        statusBoxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                if (cb.checked) {
+                    statusBoxes.forEach(other => {
+                        if (other !== cb) {
+                            other.checked = false;
+                        }
+                    });
+                }
+                updateFilters();
+            });
+        });
+
+        indepBoxes.forEach(cb => {
+            cb.addEventListener('change', updateFilters);
+        });
+
+        function updateFilters() {
+            // get all active tags
+            const activeTags = Array.from(
+                document.querySelectorAll('.filters input:checked')
+            ).map(cb => cb.dataset.tag);
+            // hide anything without an active tag
+            rows.forEach(row => {
+                const visible = activeTags.every(tag =>
+                    row.classList.contains(tag)
+                );
+                row.style.display = visible ? '' : 'none';
+            });
+        }
+
     </script>
 
 

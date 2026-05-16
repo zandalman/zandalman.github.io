@@ -422,6 +422,27 @@ img.medium {
 /* ------------------------------
    PUBLICATIONS GRID
    ------------------------------ */
+.filters {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 1.5rem auto;
+    align-items: start;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
 #publications-container {
     width: 90%;
     max-width: 1200px;

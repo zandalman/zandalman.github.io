@@ -1,6 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="filters">
+
+  <div class="filter-group">
+    <label>
+      <input type="checkbox" data-tag="tdes" class="filter-topic">
+      TDEs
+    </label>
+
+    <label>
+      <input type="checkbox" data-tag="kilonovae" class="filter-topic">
+      Kilonovae
+    </label>
+
+    <label>
+      <input type="checkbox" data-tag="galaxies" class="filter-topic">
+      Galaxies
+    </label>
+  </div>
+
+  <div class="filter-group">
+    <label>
+      <input type="checkbox" data-tag="submitted" class="filter-status">
+      Submitted
+    </label>
+
+    <label>
+      <input type="checkbox" data-tag="published" class="filter-status">
+      Published
+    </label>
+  </div>
+
+  <div class="filter-group">
+    <label>
+      <input type="checkbox" data-tag="firstauthor" class="filter-indep">
+      First author
+    </label>
+  </div>
+
+</div>
+
 <div id="pub-legend">
     <span class="legend-item">
         <img src="../static/icons/link.svg" class="legend-icon">
@@ -34,7 +74,7 @@
     </div>
 
     {% for pub in publications %}
-    <div class="pub-row">
+    <div class="pub-row pub-content {{ (pub.tags or []) | join(' ') }}">
         <div class="pub-cell year">{{ pub.year }}</div>
         <div class="pub-cell authors">{{ pub.authors|safe }}</div>
 
@@ -79,5 +119,57 @@
 {% block script %}
     <script>
         $("#nav-publications").addClass("active");
+
+        const statusBoxes = document.querySelectorAll('.filter-status');
+        const topicBoxes = document.querySelectorAll('.filter-topic');
+        const indepBoxes = document.querySelectorAll('.filter-indep');
+        const rows = document.querySelectorAll('.pub-content');
+
+        // topic boxes are mutually exclusive
+        topicBoxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                if (cb.checked) {
+                    topicBoxes.forEach(other => {
+                        if (other !== cb) {
+                            other.checked = false;
+                        }
+                    });
+                }
+                updateFilters();
+            });
+        });
+        
+        // status boxes are mutually exclusive
+        statusBoxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                if (cb.checked) {
+                    statusBoxes.forEach(other => {
+                        if (other !== cb) {
+                            other.checked = false;
+                        }
+                    });
+                }
+                updateFilters();
+            });
+        });
+
+        indepBoxes.forEach(cb => {
+            cb.addEventListener('change', updateFilters);
+        });
+
+        function updateFilters() {
+            // get all active tags
+            const activeTags = Array.from(
+                document.querySelectorAll('.filters input:checked')
+            ).map(cb => cb.dataset.tag);
+            // hide anything without an active tag
+            rows.forEach(row => {
+                const visible = activeTags.every(tag =>
+                    row.classList.contains(tag)
+                );
+                row.style.display = visible ? '' : 'none';
+            });
+        }
+
     </script>
 {% endblock %}
