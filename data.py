@@ -149,7 +149,7 @@ publications = [
     "tags": ["submitted", "tdes"],
     "journal": "preprint",
     "link": None,
-    "arxiv": None,
+    "arxiv": "https://arxiv.org/pdf/2605.20327",
     "pdf": "Nixon+2026.pdf",
     "data": None,
     "fig": "Nixon+2026.png",
