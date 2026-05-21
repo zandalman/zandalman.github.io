@@ -222,7 +222,7 @@ publications = [
     "tags": ["submitted", "galaxies"],
     "journal": "preprint",
     "link": None,
-    "arxiv": "https://arxiv.org/pdf/2510.19822",
+    "arxiv": "https://arxiv.org/abs/2510.19822",
     "pdf": "Sunseri+2025.pdf",
     "data": None,
     "fig": "Sunseri+2025.png",
