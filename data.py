@@ -3,7 +3,7 @@ research = [
     "id": "tde",
     "name": "Tidal Disruption Events",
     "pub_ids": ["Andalman+2022", "Andalman+2026a", "Nixon+2026"],
-    "pub_text": ["Andalman+2022, MNRAS", "Andalman+2026a, preprint", "Nixon+2026, preprint"],
+    "pub_text": ["Andalman+2022, MNRAS", "Andalman+2026a, OJAp", "Nixon+2026, preprint"],
     "image": "tde.png",
     "text": [
       r"""
