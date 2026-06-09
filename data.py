@@ -128,17 +128,46 @@ publications = [
     "year": 2026,
     "authors": "Z. L. Andalman, C. Fryer, C. Fontes, et al.",
     "authors_long": "Z. L. Andalman, C. Fryer, C. Fontes, M. Mumpower, & R. Wollaeger",
-    "title": "Thermalization in Kilonova Ejecta with Transport and Detailed Microphysics",
+    "title": "Beta-Particle Transport and Thermalization in Kilonova Ejecta with Detailed Atomic Microphysics",
     "tags": ["firstauthor", "kilonovae"],
     "journal": "in prep.",
     "link": None,
     "arxiv": None,
     "pdf": None,
-    "data": None,
-    "fig": None,
-    "data_description": None,
-    "fig_caption": None,
-    "abstract": None
+    "data": "beta.zip",
+    "fig": "Andalman+2026b.png",
+    "data_description": r"""
+    Per-species stopping, transport, and electron impact ionization (EII) cross sections for beta-particle transport in kilonova ejecta.
+    We also provide combined cross sections using our strong r-process abundance pattern at 30 days post-merger.
+    The data are adapted from the Evaluated Electron Data Library (EEDL), 
+    distributed as part of the Electron Photon Interaction Cross Sections (EPICS) 2023 database (Cullen 2017).
+    The original EPICS 2023 data are available at https://www-nds.iaea.org/epics/.
+    """,
+    "fig_caption": r"""
+    Beta-particle velocity coordinate (bottom panel, a proxy for Lagrangian position in a homologously expanding flow) and comoving energy (top panel) as a function of time
+    in our fiducial ejecta model with a radial magnetic
+    for 1 MeV particles injected by-hand at times 1 (red lines), 3 (orange lines), 9 (yellow lines), 27 (green lines), 81 (blue lines), and 243 (purple lines) days and velocity coordinates 0.05c (dark lines) and 0.15c (light lines). 
+    We inject 24 particles at each injection site (black dots). 
+    Initially, particles thermalize locally in space and time (red lines). 
+    At intermediate times, particles persist in the ejecta and thermalize non-locally in space and time (orange and yellow lines). 
+    Some particles escape before they completely thermalize, while others are trapped by scattering, especially those injected at small velocity coordinate where the density is higher. 
+    At late times, particles escape before most of their energy thermalizes (green, blue, and purple lines).
+    """,
+    "abstract": r"""
+    When two neutron stars collide, they eject material containing heavy nuclei formed by the rapid neutron capture process (r-process). 
+    As these nuclei decay, they power a bright optical/near-infrared transient known as a kilonova (KN). 
+    Modeling KN emission is a complex problem involving atomic opacities, radiation transport, and heating powered by the thermalization of radioactive decay products like gamma-rays, alpha-, and beta-particles. 
+    For heating by gamma-rays, many KN modeling codes do full radiation transport calculations. 
+    However, heating by alpha-, and beta-particles relies on simplified descriptions of collisions and transport and remains an important source of uncertainty in KN models. 
+    In this paper, we study the thermalization and transport of beta-particles.
+    For thermalization, we use evaluated atomic physics data to estimate per-species contributions to energy deposition, scattering, and electron impact ionization, which we make available online. 
+    For transport, we develop a fully-relativistic framework for charged particle transport in a spherically symmetric, homologously expanding ejecta, considering two limiting magnetic-field geometries. 
+    Non-local energy deposition and escape reduce thermalization efficiency, especially in the innermost and outermost ejecta, lowering the ejecta temperature and ionization state compared to local deposition models. 
+    Coulomb scattering partially offsets these effects by trapping particles at intermediate times. 
+    Ionization by secondary electrons significantly enhances the overall ionization rate. 
+    We provide analytic prescriptions for the spatially-dependent thermalization efficiency for use in future light curve calculations. 
+    Our results demonstrate the importance of incorporating evaluated atomic data and charged-particle transport into future KN into future radiative transfer calculations.
+    """
   },
   {
     "id": "Nixon+2026",
