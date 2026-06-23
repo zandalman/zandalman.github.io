@@ -33,8 +33,8 @@ research = [
   {
     "id": "galaxy",
     "name": "Cosmic Dawn Galaxies",
-    "pub_ids": ["Andalman+2025", "Sunseri+2025"],
-    "pub_text": ["Andalman+2025, MNRAS", "Sunseri+2025, preprint"],
+    "pub_ids": ["Andalman+2025", "Sunseri+2026"],
+    "pub_text": ["Andalman+2025, MNRAS", "Sunseri+2026, MNRAS"],
     "image": "galaxy.png",
     "text": [
       r"""
@@ -57,13 +57,13 @@ research = [
     "id": "kilonova",
     "name": "Kilonovae",
     "pub_ids": ["Andalman+2026b"],
-    "pub_text": ["Andalman+2026b, in prep."],
+    "pub_text": ["Andalman+2026b, preprint"],
     "image": "kilonova.png",
     "text": [
       r"""
       The observation of GW170817 confirmed that binary neutron star mergers are not only strong sources of gravitational waves, but also sites of nucleosynthesis by the rapid neutron capture process (r-process). 
-      The radioactive decay of r-process nuclides in the merger ejecta produces energetic gamma-rays, beta and alpha particles that, when thermalized, power a bright transient in the optical and near-infrared known as a kilonova (KN). 
-      In my ongoing work [1], I develop a new model for the transport and thermalization of beta decay electrons using detailed electron-atom cross sections.
+      The radioactive decay of r-process nuclides in the merger ejecta produces energetic gamma-rays, fission fragments, alpha-particles, and beta-particles that, when thermalized, power a bright transient in the optical and near-infrared known as a kilonova (KN). 
+      In [1], I develop a new model for the transport and thermalization of beta-decay electrons using detailed atomic microphysics.
       """
     ]
   },
@@ -126,11 +126,11 @@ publications = [
     {
     "id": "Andalman+2026b",
     "year": 2026,
-    "authors": "Z. L. Andalman, C. Fryer, C. Fontes, et al.",
-    "authors_long": "Z. L. Andalman, C. Fryer, C. Fontes, M. Mumpower, & R. Wollaeger",
+    "authors": "Z. L. Andalman, C. L. Fryer, C. J. Fontes, et al.",
+    "authors_long": "Z. L. Andalman, C. L. Fryer, C. J. Fontes, M. R. Mumpower, & R. T. Wollaeger",
     "title": "Beta-Particle Transport and Thermalization in Kilonova Ejecta with Detailed Atomic Microphysics",
     "tags": ["firstauthor", "kilonovae"],
-    "journal": "in prep.",
+    "journal": "preprint",
     "link": None,
     "arxiv": None,
     "pdf": None,
@@ -154,19 +154,20 @@ publications = [
     At late times, particles escape before most of their energy thermalizes (green, blue, and purple lines).
     """,
     "abstract": r"""
-    When two neutron stars collide, they eject material containing heavy nuclei formed by the rapid neutron capture process (r-process). 
-    As these nuclei decay, they power a bright optical/near-infrared transient known as a kilonova (KN). 
-    Modeling KN emission is a complex problem involving atomic opacities, radiation transport, and heating powered by the thermalization of radioactive decay products like gamma-rays, alpha-, and beta-particles. 
+    When two neutron stars collide, they eject material containing heavy nuclei formed by the rapid neutron capture process (r-process).
+    As these nuclei decay, they power a bright optical/near-infrared transient known as a kilonova (KN).
+    Modeling KN emission is a complex problem involving atomic opacities, radiation transport, and heating
+    powered by the thermalization of radioactive decay products like gamma-rays, alpha-particles, and beta-particles.
     For heating by gamma-rays, many KN modeling codes do full radiation transport calculations. 
-    However, heating by alpha-, and beta-particles relies on simplified descriptions of collisions and transport and remains an important source of uncertainty in KN models. 
-    In this paper, we study the thermalization and transport of beta-particles.
-    For thermalization, we use evaluated atomic physics data to estimate per-species contributions to energy deposition, scattering, and electron impact ionization, which we make available online. 
-    For transport, we develop a fully-relativistic framework for charged particle transport in a spherically symmetric, homologously expanding ejecta, considering two limiting magnetic-field geometries. 
+    However, heating by alpha- and beta-particles relies on simplified descriptions of collisions and transport, and remains an important source of uncertainty in KN models. 
+    In this paper, we study the thermalization and transport of beta-particles. 
+    To study thermalization, we use evaluated atomic physics data to estimate per-species contributions to energy deposition, scattering, and electron impact ionization, which we make available online. 
+    To include non-local effects, we develop a fully relativistic framework for charged particle transport in a spherically symmetric, homologously expanding ejecta, considering two limiting magnetic-field geometries. 
     Non-local energy deposition and escape reduce thermalization efficiency, especially in the innermost and outermost ejecta, lowering the ejecta temperature and ionization state compared to local deposition models. 
     Coulomb scattering partially offsets these effects by trapping particles at intermediate times. 
     Ionization by secondary electrons significantly enhances the overall ionization rate. 
-    We provide analytic prescriptions for the spatially-dependent thermalization efficiency for use in future light curve calculations. 
-    Our results demonstrate the importance of incorporating evaluated atomic data and charged-particle transport into future KN into future radiative transfer calculations.
+    We provide analytic prescriptions for the spatially dependent thermalization efficiency for use in future light-curve calculations. 
+    Our results demonstrate that evaluated atomic data and charged-particle transport should be incorporated into the next generation of KN models.
     """
   },
   {
@@ -243,14 +244,14 @@ publications = [
     """
   },
   {
-    "id": "Sunseri+2025",
-    "year": 2025,
+    "id": "Sunseri+2026",
+    "year": 2026,
     "authors": "J. Sunseri, Z. L. Andalman, & R. Teyssier",
     "authors_long": "J. Sunseri, Z. L. Andalman, & R. Teyssier",
     "title": "Supermassive Black Hole Growth in Massive Galaxies at Cosmic Dawn",
-    "tags": ["submitted", "galaxies"],
-    "journal": "preprint",
-    "link": None,
+    "tags": ["published", "submitted", "galaxies"],
+    "journal": "MNRAS",
+    "link": "https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stag1129/8709288",
     "arxiv": "https://arxiv.org/abs/2510.19822",
     "pdf": "Sunseri+2025.pdf",
     "data": None,
