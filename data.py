@@ -133,7 +133,7 @@ publications = [
     "journal": "preprint",
     "link": None,
     "arxiv": None,
-    "pdf": None,
+    "pdf": "Andalman+2026b.pdf",
     "data": "beta.zip",
     "fig": "Andalman+2026b.png",
     "data_description": r"""
