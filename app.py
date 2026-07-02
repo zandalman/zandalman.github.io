@@ -36,4 +36,4 @@ def publication_routes():
 
 if __name__ == '__main__':
     freezer.freeze()
-    app.run()
+    app.run(port=5001)
