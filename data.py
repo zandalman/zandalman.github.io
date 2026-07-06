@@ -143,6 +143,7 @@ publications = [
     distributed as part of the Electron Photon Interaction Cross Sections (EPICS) 2023 database (Cullen 2017).
     The original EPICS 2023 data are available at https://www-nds.iaea.org/epics/.
     """,
+    "media_description": None,
     "fig_caption": r"""
     Beta-particle velocity coordinate (bottom panel, a proxy for Lagrangian position in a homologously expanding flow) and comoving energy (top panel) as a function of time
     in our fiducial ejecta model with a radial magnetic
@@ -184,6 +185,7 @@ publications = [
     "data": None,
     "fig": "Nixon+2026.png",
     "data_description": None,
+    "media_description": None,
     "fig_caption": r"""
     We simulate the tidal disruption of an n=3 polytrope star by a 10^6 Msol SMBH in the smooth particle hydrodynamics code PHANTOM using 10^6 particles.
     We show the returning debris stream in our simulations roughly 50 days post-disruption, varying the artificial viscosity in each panel parameterized by alpha^AV and beta^AV.
@@ -220,6 +222,7 @@ publications = [
     Python code for generating EOS tables and their inversions using the partition function from Tomida+2013.
     Code in gen.py, example usage in gen.ipynb.
     """,
+    "media_description": None,
     "fig_caption": r"""
     The density as a function of vertical height in the debris stream, from our 1D hydrodynamic simulations in Athena++.
     We show 12 profiles before (top panel) and after (bottom panel) the nozzle. 
@@ -257,6 +260,7 @@ publications = [
     "data": None,
     "fig": "Sunseri+2025.png",
     "data_description": None,
+    "media_description": None,
     "fig_caption": r"""
     SMBH mass evolution in our suite of cosmological zoom-in simulations of a massive galaxy at Cosmic Dawn in RAMSES.
     The suite includes simulations with/without AGN feedback (solid/dashed lines) and across a range of maximum Eddington factors (lam_Edd) and initial SMBH masses.
@@ -290,11 +294,15 @@ publications = [
     "arxiv": "https://arxiv.org/abs/2410.20530",
     "pdf": "Andalman+2025.pdf",
     "data": "sfr.zip",
+    "media": "https://www.quantamagazine.org/astrophysicists-puzzle-over-webbs-new-universe-20260702/",
     "fig": "Andalman+2025.png",
     "data_description": r"""
     Star formation histories of simulated massive galaxies at Cosmic Dawn.
     Data available for the fiducial model and models lowPhot, highPhot, solTurb, varTurb.
     See README.txt for more information.
+    """,
+    "media_description": r"""
+    My visualization of the co-evolution of dark matter, gas, and stars was featured in a Quanta magazine article about the overmassive black holes in the early Universe.
     """,
     "fig_caption": r"""
     Density-temperature distribution of gas in our suite of cosmological zoom-in simulations of a massive galaxy at Cosmic Dawn in RAMSES.
@@ -329,6 +337,7 @@ publications = [
     "data": None,
     "fig": "Kaaz+2023.png",
     "data_description": None,
+    "media_description": None,
     "fig_caption": r"""
     The LT torques induced by the rotation of the central BH cause the accretion disk to warp and, sometimes, tear into discrete subdisks. 
     In each panel, we plot a 3D rendering of the fluid frame gas density, separated by 1000 rg/c. 
@@ -364,6 +373,7 @@ publications = [
     "data": None,
     "fig": "Andalman+2022.jpeg",
     "data_description": None,
+    "media_description": None,
     "fig_caption": r"""
     Contour plots of the logarithmic rest mass density in the equatorial plane during the debris’ initial pericentre passage (first row) 
     and the first (second row) and third (third row) self-intersection events. 

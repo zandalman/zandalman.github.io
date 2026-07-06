@@ -22,6 +22,12 @@
   <p>{{ pub.data_description }}</p>
   {% endif %}
 
+  {% if pub.media_description %}
+  <hr>
+  <h3>Media description</h3>
+  <p>{{ pub.media_description }}</p>
+  {% endif %}
+
   <hr>
 
   <div class="pub-links">
@@ -55,6 +61,14 @@
             <img src="../../static/icons/data.svg" class="icon">
         </a>
         download data
+      </span>
+      {% endif %}
+      {% if pub.media %}
+      <span class="legend-item">
+        <a href="{{ pub.media }}" download title="go to media">
+            <img src="../../static/icons/media.svg" class="icon">
+        </a>
+        go to media
       </span>
       {% endif %}
   </div>
