@@ -2,8 +2,8 @@ research = [
   {
     "id": "tde",
     "name": "Tidal Disruption Events",
-    "pub_ids": ["Andalman+2022", "Andalman+2026a", "Nixon+2026"],
-    "pub_text": ["Andalman+2022, MNRAS", "Andalman+2026a, OJAp", "Nixon+2026, preprint"],
+    "pub_ids": ["Andalman+2022", "Andalman+2026a", "Nixon+2026", "Andalman+2026c"],
+    "pub_text": ["Andalman+2022, MNRAS", "Andalman+2026a, OJAp", "Nixon+2026, preprint", "Andalman+2026c, in prep"],
     "image": "tde.png",
     "text": [
       r"""
@@ -27,6 +27,8 @@ research = [
       including the effect of chemical processes and the implications for the stream self-intersection.
       In [3], we use analytic arguments and numerical experiments to highlight a numerical challenge in 3D TDE simulations;
       namely, that the converging in-plane velocity field in the post-nozzle region produces anomalous dissipation.
+      In [4], I develop a two-stage model for circularization in which the system transitions from a limit cycle of strong self-intersections
+      to a continuous stream mixing and entrainment by an envelope formed from earlier fallback.
       """
     ]
   },
@@ -123,13 +125,31 @@ research = [
 ]
 
 publications = [
+      {
+      "id": "Andalman+2026c",
+      "year": 2026,
+      "authors": "Z. L. Andalman & E. Quataert",
+      "authors_long": "Z. L. Andalman & E. Quataert",
+      "title": "Limit Cycle and Stream Destruction: A Two-Stage Model for Circularization in Tidal Disruption Events",
+      "tags": ["firstauthor", "tdes"],
+      "journal": "in prep",
+      "link": None,
+      "arxiv": None,
+      "pdf": None,
+      "data": None,
+      "fig": None,
+      "data_description": None,
+      "media_description": None,
+      "fig_caption": None,
+      "abstract": None
+    },
     {
     "id": "Andalman+2026b",
     "year": 2026,
     "authors": "Z. L. Andalman, C. L. Fryer, C. J. Fontes, et al.",
     "authors_long": "Z. L. Andalman, C. L. Fryer, C. J. Fontes, M. R. Mumpower, & R. T. Wollaeger",
     "title": "Beta-Particle Transport and Thermalization in Kilonova Ejecta with Detailed Atomic Microphysics",
-    "tags": ["firstauthor", "kilonovae"],
+    "tags": ["firstauthor", "kilonovae", "submitted"],
     "journal": "preprint",
     "link": None,
     "arxiv": "https://arxiv.org/abs/2607.01228",
